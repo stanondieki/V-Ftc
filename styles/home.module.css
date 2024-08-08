@@ -1,0 +1,7 @@
+/* styles.css or a similar CSS file */
+.bg {
+    background-image: url('/images/darkblue.png'); /* Replace with the actual path to your background image */
+    background-size: cover;
+    background-position: center;
+  }
+  
