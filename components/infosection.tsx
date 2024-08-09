@@ -1,26 +1,32 @@
 import React from 'react';
+import { FaUsers } from "react-icons/fa6";
+import { FaGlobe } from "react-icons/fa";
+import Link from 'next/link';
 
 const InfoSection: React.FC = () => {
   return (
     <section className="bg-[#000435] py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between">
         <div className="flex-1 mb-8 lg:mb-0">
-          <img src="/images/home.png" alt="Illustration" className="w-full h-auto" />
+          <img src="/images/layout/home.png" alt="Illustration" className="w-full h-full mr-6 animate-float" />
         </div>
-        <div className="flex-1 lg:pl-10">
-          <h2 className="text-3xl font-extrabold text-white mb-6">
+        <div className="flex-1 lg:pl-15 relative">
+          <h2 className="text-3xl font-medium text-white mb-6">
             What is V-FTC?
           </h2>
-          <p className="text-lg text-gray-300 mb-8">
+          <p className="text-md text-gray-300 mb-8">
             The world first platform to reward investors and traders build on Ventures Federal Trade Commission.
           </p>
-          <div className="space-y-8">
+          <div className="space-y-8 relative">
+            {/* Vertical dotted line */}
+            <div className="absolute left-6 top-12 h-[calc(100%-2.5rem)] w-0.5 border-l-2 border-dotted border-blue-500"></div>
+
             <div className="flex items-start">
               <div className="flex-shrink-0">
-                <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center">
-                  <svg className="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 12H9v-2h2v2zm0-4H9V7h2v3z" />
-                  </svg>
+                <div className="bg-gradient-to-r from-blue-500 to-pink-500 rounded-full h-12 w-12 flex justify-center items-center">
+                  <Link href="/">
+                    <FaUsers size={20} color="white" />
+                  </Link>
                 </div>
               </div>
               <div className="ml-4">
@@ -32,10 +38,10 @@ const InfoSection: React.FC = () => {
             </div>
             <div className="flex items-start">
               <div className="flex-shrink-0">
-                <div className="h-12 w-12 rounded-full bg-pink-500 flex items-center justify-center">
-                  <svg className="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 12H9v-2h2v2zm0-4H9V7h2v3z" />
-                  </svg>
+                <div className="bg-gradient-to-r from-blue-500 to-pink-500 rounded-full h-12 w-12 flex justify-center items-center">
+                  <Link href="/">
+                    <FaGlobe size={20} color="white" />
+                  </Link>
                 </div>
               </div>
               <div className="ml-4">
@@ -47,10 +53,10 @@ const InfoSection: React.FC = () => {
             </div>
             <div className="flex items-start">
               <div className="flex-shrink-0">
-                <div className="h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center">
-                  <svg className="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 12H9v-2h2v2zm0-4H9V7h2v3z" />
-                  </svg>
+                <div className="bg-gradient-to-r from-blue-500 to-pink-500 rounded-full h-12 w-12 flex justify-center items-center">
+                  <Link href="/">
+                    <FaUsers size={20} color="white" />
+                  </Link>
                 </div>
               </div>
               <div className="ml-4">
@@ -68,3 +74,4 @@ const InfoSection: React.FC = () => {
 };
 
 export default InfoSection;
+

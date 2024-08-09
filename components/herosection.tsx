@@ -1,21 +1,50 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 const HeroSection: React.FC = () => {
+  const [timeLeft, setTimeLeft] = useState({ days: 20, hours: 23, mins: 7, secs: 2 });
+
+  useEffect(() => {
+    const endDate = new Date(new Date().getTime() + 20 * 24 * 60 * 60 * 1000); // Set the end date for the timer (e.g., 20 days from now)
+    const interval = setInterval(() => {
+      const now = new Date();
+      const distance = endDate.getTime() - now.getTime();
+      
+      if (distance < 0) {
+        clearInterval(interval);
+        setTimeLeft({ days: 0, hours: 0, mins: 0, secs: 0 });
+        return;
+      }
+      
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      setTimeLeft({ days, hours, mins, secs });
+    }, 1000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
+  const raisedTokens = 1450;
+  const targetTokens = 150000;
+  const progressPercentage = Math.min((raisedTokens / targetTokens) * 100, 100); // Ensure it's at most 100%
+
   return (
-    <div className="relative bg-[#0c1f4a] top-12 text-white">
-      {/* Add background pattern or image */}
+    <div className="relative top-12 text-white mb-8 mt-8">
+      {/* Background Image */}
       <div className="absolute inset-0 bg-no-repeat bg-cover opacity-100" 
-           style={{ backgroundImage: 'url(/path-to-your-background-image.png)' }}>
+           style={{ backgroundImage: 'url(/images/background/Slider.jpg)' }}>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="flex flex-col lg:flex-row justify-between items-center">
           <div className="text-center lg:text-left lg:w-1/2">
-            <h1 className="text-4xl text-5xl font-bold leading-tight">
+            <h1 className="text-3xl lg:text-4xl font-bold leading-tight">
               Welcome To Ventures Federal Trading Commission (V-FTC)
             </h1>
-            <p className="mt-4 text-10 lg:text-xl">
+            <p className="mt-4 text-lg lg:text-xl">
               Tomorrow's Success Begins With Today's Investment. Invest With Confidence, Live With Abundance.
             </p>
             <Link href="/register"
@@ -24,40 +53,65 @@ const HeroSection: React.FC = () => {
             </Link>
           </div>
 
-          <div className="mt-12 lg:mt-0 lg:w-1/2">
-            <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-lg shadow-lg">
-              <h2 className="text-2xl font-bold mb-4">Token Sale End In</h2>
-              <div className="flex justify-between text-center mb-4">
-                <div>
-                  <p className="text-3xl font-bold">20</p>
-                  <p>Days</p>
+          <div className="mt-12 lg:mt-0 lg:w-2/5 border border-cyan-400 rounded-lg">
+            <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-8 rounded-lg shadow-lg relative">
+              <h2 className="text-4xl font-bold mb-6 text-center">Token Sale Ends In</h2>
+              <div className="flex justify-between text-center mb-8">
+                <div className="p-4 rounded-lg flex flex-col items-center" style={{ width: '80px' }}>
+                  <p className="text-4xl font-bold text-white bg-gray-500 backdrop-blur-lg p-3 rounded-lg shadow-lg relative">{timeLeft.days}</p>
+                  <p className="text-xl text-white mt-4">Days</p>
                 </div>
-                <div>
-                  <p className="text-3xl font-bold">23</p>
-                  <p>Hours</p>
+                <div className="p-4 rounded-lg flex flex-col items-center" style={{ width: '80px' }}>
+                  <p className="text-4xl font-bold text-white bg-gray-500 backdrop-blur-lg p-3 rounded-lg shadow-lg relative">{timeLeft.hours}</p>
+                  <p className="text-xl text-white mt-4">Hours</p>
                 </div>
-                <div>
-                  <p className="text-3xl font-bold">07</p>
-                  <p>Mins</p>
+                <div className="p-4 rounded-lg flex flex-col items-center" style={{ width: '80px' }}>
+                  <p className="text-4xl font-bold text-white bg-gray-500 backdrop-blur-lg p-3 rounded-lg shadow-lg relative">{timeLeft.mins}</p>
+                  <p className="text-xl text-white mt-4">Mins</p>
                 </div>
-                <div>
-                  <p className="text-3xl font-bold">02</p>
-                  <p>Secs</p>
-                </div>
-              </div>
-              <p className="text-red-600 font-bold mb-2">Raised - 1,450 Tokens</p>
-              <p className="text-gray-500">Target - 150,000 Tokens</p>
-              <div className="relative pt-1">
-                <div className="overflow-hidden h-2 mb-4 text-xs flex rounded bg-purple-200">
-                  <div style={{ width: '40%' }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500"></div>
+                <div className="p-4 rounded-lg flex flex-col items-center" style={{ width: '80px' }}>
+                  <p className="text-4xl font-bold text-white bg-gray-500 backdrop-blur-lg p-3 rounded-lg shadow-lg relative">{timeLeft.secs}</p>
+                  <p className="text-xl text-white mt-4">Secs</p>
                 </div>
               </div>
-              <div className="flex justify-between text-xs text-gray-500">
-                <span>Soft cap</span>
-                <span>Crowdsale</span>
-                <span>Hard cap</span>
+              
+              <div className="relative mb-8 mt-6">
+                <div className="absolute w-full top-0 left-0 flex justify-between px-4 text-sm text-gray-300">
+                  <div className="relative">
+                    Raised-
+                    <span className="text-pink-700 font-bold">{raisedTokens} Tokens</span>
+                    <span className="absolute left-0 top-0 w-px bg-white"></span>
+                  </div>
+                  <div className="relative">
+                    Target-
+                    <span className="text-pink-700 font-bold">{targetTokens} Tokens</span>
+                    <span className="absolute left-1/2 transform -translate-x-1/4 top-0 w-px  bg-white"></span>
+                  </div>
+                  <div className="relative">
+                    <span className="absolute right-0 top-0 w-px h-full bg-white"></span>
+                  </div>
+                </div>
               </div>
-              <div className="flex justify-between mt-4 text-gray-400">
+              <div className="relative h-10 bg-gray-600 rounded-full w-full">
+                <div style={{ width: `${60}%` }} className="h-full bg-gradient-to-r from-blue-500 to-pink-500 rounded-full mt-20"></div>
+              </div>
+              
+              <div className="flex justify-between mt-4 text-xs text-white px-6">
+                <div className="relative">
+                  <span className="absolute left-0 top-0 w-px h-16 bg-white"></span>
+                  <span>Soft cap</span>
+                </div>
+                <div className="relative">
+                  <span className="absolute left-0 transform -translate-x-1/2 top-0 w-px h-12 bg-white"></span>
+                  <span>Crowdsale</span>
+                </div>
+                <div className="relative">
+                  <span className="absolute right-0 top-0 w-px h-12 bg-white"></span>
+                  <span>Hard cap</span>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between mt-10 text-gray-400 bg-gray-500 p-4 rounded-lg">
                 <i className="fab fa-bitcoin text-3xl"></i>
                 <i className="fab fa-ethereum text-3xl"></i>
                 <i className="fab fa-paypal text-3xl"></i>
@@ -67,7 +121,7 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
   );
 };
 
