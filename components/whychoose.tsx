@@ -18,7 +18,7 @@ const features = [
     title: "Strong Security Measures",
     description: "Security is a top priority at V-FTC. The platform employs state-of-the-art security protocols, including encryption and two-factor authentication, to safeguard your personal information and investments. Additionally, V-FTC adheres to regulatory standards, providing a secure and trustworthy environment for your investments.",
     icon: (
-      <Link href='/'>
+      <Link href='/' className="perspective-1000 hover:rotate-y-180 transform transition-transform duration-360">
         <FaArrowUpRightDots size={40} />
       </Link>
     )
@@ -89,8 +89,8 @@ const WhyChooseVFTC: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-[#000435] p-6 rounded-lg shadow-lg flex flex-col items-center group">
-                <div className="relative w-24 h-24 mb-4 flex items-center justify-center group-hover:rotate-360 transition-transform duration-700 ease-in-out">
-                  <div className="absolute inset-0 flex items-center justify-center rounded-full ring-4 ring-blue-300 ring-offset-4">
+                <div className="relative w-24 h-24 mb-4 flex items-center justify-center group-hover:rotate-360 transition-transform duration-700 ease-in-out group-hover:rotate-y-180">
+                  <div className="absolute inset-0 flex items-center justify-center rounded-full ring-2 ring-blue-300 ring-offset-2">
                     <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-pink-500 rounded-full flex items-center justify-center">
                       {feature.icon}
                     </div>

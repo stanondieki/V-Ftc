@@ -126,7 +126,7 @@ const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center">
             <Link
               href="/login"
-              className="text-white px-5 py-2 rounded-full text-md font-bold bg-gradient-to-r from-blue-500 to-pink-500 hover:from-blue-600 hover:to-pink-600"
+              className="text-white px-5 py-2 rounded-full text-md font-bold bg-gradient-to-r from-blue-500 to-pink-500 hover:from-pink-600 hover:to-blue-600"
             >
               LOGIN
             </Link>
