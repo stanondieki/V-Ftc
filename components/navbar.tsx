@@ -44,8 +44,7 @@ const Navbar: React.FC = () => {
                 </Link>
                 <Link
                   href="/services/goldInvest"
-                  className="block hover:text-pink-500 px-4 py-2 text-lg font-bold border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
-                >
+                  className="block hover:text-pink-500 px-4 py-2 text-lg font-bold border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear">
                   Stock Investment
                 </Link>
                 <Link
