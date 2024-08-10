@@ -95,6 +95,13 @@ const HeroSection: React.FC = () => {
               </div>
               <div className="relative h-10 bg-gray-600 rounded-full w-full">
                 <div style={{ width: `${50}%` }} className="h-full bg-gradient-to-r from-blue-500 to-pink-500 rounded-full mt-20"></div>
+                
+                <div
+    className="absolute inset-0 flex items-center justify-center"
+    style={{ left: '20%', transform: 'translateX(-20%)' }}
+  >
+    <span className="text-white font-bold">60,490</span>
+              </div>
               </div>
               
               <div className="flex justify-between mt-4 text-xs text-white px-6">

@@ -6,10 +6,14 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4 flex flex-col lg:flex-row justify-between items-start">
         <div className="flex flex-col items-start space-y-4 lg:space-y-6 lg:items-start lg:mr-8">
           <img src="/images/logos/logo-main.png" alt="V-FTC Logo" className="h-10" />
-          <div className="flex space-x-2 mt-4">
+          <div className="flex space-x-2 mt-6 h-16"> {/* Adjusted margin-top and height */}
             {socialIcons.map((icon, index) => (
-              <a href={icon.href} key={index} className="bg-gray-600 p-2 rounded-md hover:bg-gray-500">
-                <img src={icon.src} alt={icon.alt} className="w-5 h-5" />
+              <a href={icon.href} key={index} className="bg-gray-600 p-3 rounded-md hover:bg-gray-500"> {/* Increased padding */}
+                <img
+                  src={icon.src}
+                  alt={icon.alt}
+                  className="w-8 h-8 filter invert" 
+                />
               </a>
             ))}
           </div>
@@ -30,7 +34,7 @@ const Footer: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className="border-t border-gray-600 mt-8 py-4 text-center">
+      <div className="border-t border-gray-600 mt-8 py-4 text-center h-40">
         <p>© 2024. All rights reserved by VFTC.</p>
       </div>
 

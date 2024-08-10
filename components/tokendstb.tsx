@@ -96,7 +96,7 @@ const TokenDistribution: React.FC = () => {
                     </button>
                 </div>
             </div>
-            <div className="flex justify-between items-center max-w-screen-xl mx-auto px-4"> {/* Full-width container with no extra margins */}
+            <div className="flex justify-between items-center"> {/* Removed container classes */}
                 <div className="flex-1 flex flex-col gap-2 pr-4">{renderStats('left')}</div>
                 <div className="flex-shrink-0 mx-4">
                     <div className="bg-[#000435] p-6 rounded-full">
