@@ -43,9 +43,8 @@ const Navbar: React.FC = () => {
                   Gold Investment
                 </Link>
                 <Link
-                  href="/services/service3"
-                  className="block hover:text-pink-500 px-4 py-2 text-lg font-bold border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
-                >
+                  href="/services/goldInvest"
+                  className="block hover:text-pink-500 px-4 py-2 text-lg font-bold border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear">
                   Stock Investment
                 </Link>
                 <Link
@@ -101,13 +100,13 @@ const Navbar: React.FC = () => {
             {activeDropdown === 'pages' && (
               <div className="absolute mt-2 bg-white text-black rounded-md shadow-lg w-48">
                 <Link
-                  href="/pages/page1"
+                  href="/Login"
                   className="block hover:text-pink-500 px-4 py-2 text-lg font-bold border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
                 >
                   Sign In
                 </Link>
                 <Link
-                  href="/pages/page2"
+                  href="/Register"
                   className="block hover:text-pink-500 px-4 py-2 text-lg font-bold border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
                 >
                   Sign Up
@@ -124,7 +123,7 @@ const Navbar: React.FC = () => {
         </div>
         <div className="hidden md:flex items-center">
           <Link
-            href="/login"
+            href="/Login"
             className="text-white px-5 py-2 rounded-full text-lg font-bold bg-gradient-to-r from-blue-500 to-pink-500 hover:from-pink-600 hover:to-blue-600"
           >
             LOGIN
@@ -177,7 +176,7 @@ const Navbar: React.FC = () => {
             <Link href="/apps" className="block text-white hover:text-pink-500 px-3 py-2 rounded-md text-lg font-bold">
               Apps Download
             </Link>
-            <Link href="/login" className="block bg-gradient-to-r from-blue-500 to-pink-500 text-white px-3 py-2 rounded-md text-lg font-bold">
+            <Link href="/Login" className="block bg-gradient-to-r from-blue-500 to-pink-500 text-white px-3 py-2 rounded-md text-lg font-bold">
               LOGIN
             </Link>
           </div>
