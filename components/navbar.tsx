@@ -128,7 +128,7 @@ const Navbar: React.FC = () => {
             )}
           </div>
 
-          <Link href="/contact" className="text-white hover:text-pink-500 px-3 py-2 rounded-md text-base font-bold">
+          <Link href="/Contact" className="text-white hover:text-pink-500 px-3 py-2 rounded-md text-base font-bold">
             Contact Us
           </Link>
           <Link href="/AppsDownload" className="text-white hover:text-pink-500 px-3 py-2 rounded-md text-base font-bold">
@@ -256,7 +256,7 @@ const Navbar: React.FC = () => {
                 </div>
               )}
             </div>
-            <Link href="/contact" className="block text-white hover:text-pink-500 px-3 py-2 rounded-md text-lg font-bold">
+            <Link href="/Contact" className="block text-white hover:text-pink-500 px-3 py-2 rounded-md text-lg font-bold">
               Contact Us
             </Link>
             <Link href="/AppsDownload" className="block text-white hover:text-pink-500 px-3 py-2 rounded-md text-lg font-bold">
