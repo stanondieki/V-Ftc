@@ -1,6 +1,7 @@
-import ForexInvestiment from "@/services/forexinvestment";
+import Forex from "@/services/forexinvestment";
+
 
 const ForexinvestimentPage = () => {
-    return
-    <ForexInvestiment/>
+    return <Forex/>
 }
+export default ForexinvestimentPage;

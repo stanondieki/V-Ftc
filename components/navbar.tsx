@@ -41,31 +41,31 @@ const Navbar: React.FC = () => {
             {activeDropdown === 'services' && (
               <div className="absolute mt-2 bg-white text-black rounded-md shadow-lg w-48">
                 <Link
-                  href="/services/service1"
+                  href="/Investiment"
                   className="block hover:text-pink-500 px-4 py-2 text-sm font-bold text-gray-800 border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
                 >
                   Investment Support
                 </Link>
                 <Link
-                  href="/services/service2"
+                  href="/Goldinvestiment"
                   className="block hover:text-pink-500 px-4 py-2 text-sm font-bold text-gray-800 border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
                 >
                   Gold Investment
                 </Link>
                 <Link
-                  href="/services/goldInvest"
+                  href="/Stockinvestiment"
                   className="block hover:text-pink-500 px-4 py-2 text-sm font-bold text-gray-800 border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
                 >
                   Stock Investment
                 </Link>
                 <Link
-                  href="/services/service4"
+                  href="/Forexinvestiment"
                   className="block hover:text-pink-500 px-4 py-2 text-lg font-bold border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
                 >
                   Forex Investment
                 </Link>
                 <Link
-                  href="/services/service5"
+                  href="/Digital"
                   className="block hover:text-pink-500 px-4 py-2 text-sm font-bold text-gray-800 border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
                 >
                   Digital Currency
@@ -86,13 +86,13 @@ const Navbar: React.FC = () => {
             {activeDropdown === 'company' && (
               <div className="absolute mt-2 bg-white text-black rounded-md shadow-lg w-48">
                 <Link
-                  href="/company/about"
+                  href="/About"
                   className="block hover:text-pink-500 px-4 py-2 text-sm font-bold text-gray-800 border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
                 >
                   About Us
                 </Link>
                 <Link
-                  href="/company/team"
+                  href="/Privacy"
                   className="block hover:text-pink-500 px-4 py-2 text-sm font-bold text-gray-800 border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
                 >
                   Privacy Policy
@@ -131,7 +131,7 @@ const Navbar: React.FC = () => {
           <Link href="/contact" className="text-white hover:text-pink-500 px-3 py-2 rounded-md text-base font-bold">
             Contact Us
           </Link>
-          <Link href="/apps" className="text-white hover:text-pink-500 px-3 py-2 rounded-md text-base font-bold">
+          <Link href="/AppsDownload" className="text-white hover:text-pink-500 px-3 py-2 rounded-md text-base font-bold">
             Apps Download
           </Link>
         </div>
@@ -172,31 +172,31 @@ const Navbar: React.FC = () => {
               {activeDropdown === 'services' && (
                 <div className="absolute mt-2 bg-white text-black rounded-md shadow-lg w-48">
                   <Link
-                    href="/services/service1"
+                    href="/Investiment"
                     className="block hover:text-pink-500 px-4 py-2 text-sm font-bold text-gray-800 border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
                   >
                     Investment Support
                   </Link>
                   <Link
-                    href="/services/service2"
+                    href="/Goldinvestiment"
                     className="block hover:text-pink-500 px-4 py-2 text-sm font-bold text-gray-800 border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
                   >
                     Gold Investment
                   </Link>
                   <Link
-                    href="/services/goldInvest"
+                    href="/Stockinvestiment"
                     className="block hover:text-pink-500 px-4 py-2 text-sm font-bold text-gray-800 border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
                   >
                     Stock Investment
                   </Link>
                   <Link
-                    href="/services/service4"
+                    href="/Forexinvestiment"
                     className="block hover:text-pink-500 px-4 py-2 text-sm font-bold text-gray-800 border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
                   >
                     Forex Investment
                   </Link>
                   <Link
-                    href="/services/service5"
+                    href="/Digital"
                     className="block hover:text-pink-500 px-4 py-2 text-sm font-bold text-gray-800 border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
                   >
                     Digital Currency
@@ -222,7 +222,7 @@ const Navbar: React.FC = () => {
                     About Us
                   </Link>
                   <Link
-                    href="/company/team"
+                    href="/About"
                     className="block hover:text-pink-500 px-4 py-2 text-sm font-bold text-gray-800 border-b border-black hover:border-transparent hover:bg-gradient-to-r from-black via-pink-500 to-black transition-all duration-500 ease-linear"
                   >
                     Privacy Policy
@@ -259,7 +259,7 @@ const Navbar: React.FC = () => {
             <Link href="/contact" className="block text-white hover:text-pink-500 px-3 py-2 rounded-md text-lg font-bold">
               Contact Us
             </Link>
-            <Link href="/apps" className="block text-white hover:text-pink-500 px-3 py-2 rounded-md text-lg font-bold">
+            <Link href="/AppsDownload" className="block text-white hover:text-pink-500 px-3 py-2 rounded-md text-lg font-bold">
               Apps Download
             </Link>
           </div>
