@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Investment: React.FC = () => {
+const Investment = () => {
   return (
     <div className="bg-[#0c1f4a] min-h-screen flex flex-col justify-center items-center text-white">
       <div className="w-full max-w-4xl mx-auto px-4 py-12">

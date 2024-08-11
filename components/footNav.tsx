@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center lg:text-left mt-8 lg:mt-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 lg:mt-0 text-left"> {/* Updated text alignment and grid */}
           {footerLinks.map((section, index) => (
             <div key={index}>
               <h4 className="font-semibold text-teal-300 mb-2 text-xl lg:text-2xl">{section.title}</h4>
