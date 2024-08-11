@@ -2,9 +2,16 @@ import React from 'react';
 
 const Stock = () => {
   return (
-    <div className=" min-h-screen flex flex-col justify-center items-center text-white"
-    style={{ backgroundImage: 'url(/images/background/Slider.jpg)' }}>
-      <div className="w-full max-w-4xl mx-auto px-4 py-12">
+    <div className=" min-h-screen flex flex-col justify-center items-center text-white">
+      <div
+        className="flex items-center justify-center"
+        style={{
+          backgroundImage: 'url(/images/background/Slider.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '80vh',
+        }}
+      >
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">Stock Investment</h1>
           <p className="text-lg font-medium">
@@ -12,6 +19,7 @@ const Stock = () => {
           through strategic investments in the stock market. Leveraging our expertise, advanced analytics, 
           and comprehensive research, we provide tailored solutions to meet the diverse needs of our clients.
           </p>
+        </div>
         </div>
 
         <div className="mt-16 bg-[#111a34] p-8 rounded-md">
@@ -158,7 +166,7 @@ const Stock = () => {
           </div>
         </div>
       </div>
-    </div>
+    
     </div>
   );
 };

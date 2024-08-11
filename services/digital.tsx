@@ -2,14 +2,22 @@ import React from 'react';
 
 const Digital = () => {
   return (
-    <div className=" min-h-screen flex flex-col justify-center items-center text-white"
-    style={{ backgroundImage: 'url(/images/background/Slider.jpg)' }}>
-      <div className="w-full max-w-4xl mx-auto px-4 py-12">
+    <div className=" min-h-screen flex flex-col justify-center items-center text-white">
+      <div
+        className="flex items-center justify-center"
+        style={{
+          backgroundImage: 'url(/images/background/Slider.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '80vh',
+        }}
+      >
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">Digital Currency Investment Services</h1>
           <p className="text-lg font-medium">
           In today's rapidly evolving financial landscape, digital currencies have emerged as a significant asset class, offering unique opportunities for growth and diversification. At [Your Company Name], we provide comprehensive digital currency investment services tailored to meet the diverse needs of our clients.
           </p>
+        </div>
         </div>
 
         <div className="mt-16 bg-[#111a34] p-8 rounded-md">
@@ -81,7 +89,6 @@ const Digital = () => {
           
         </div>
       </div>
-    </div>
   );
 };
 

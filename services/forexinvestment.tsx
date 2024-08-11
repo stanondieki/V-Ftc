@@ -2,9 +2,16 @@ import React from 'react';
 
 const Forex: React.FC = () => {
   return (
-    <div className=" min-h-screen flex flex-col justify-center items-center text-white"
-    style={{ backgroundImage: 'url(/images/background/Slider.jpg)' }}>
-      <div className="w-full max-w-4xl mx-auto px-4 py-12">
+    <div className=" min-h-screen flex flex-col justify-center items-center text-white">
+      <div
+        className="flex items-center justify-center"
+        style={{
+          backgroundImage: 'url(/images/background/Slider.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '80vh',
+        }}
+      >
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">Forex Investment Service</h1>
           <p className="text-lg font-medium">
@@ -15,6 +22,7 @@ const Forex: React.FC = () => {
             tailored investment strategies to maximize returns while managing
             risks.
           </p>
+        </div>
         </div>
 
         <div>
@@ -184,7 +192,7 @@ const Forex: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+
   );
 };
 
