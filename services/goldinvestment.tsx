@@ -2,8 +2,16 @@ import React from 'react';
 
 const Gold = () => {
   return (
-    <div className="bg-[#0c1f4a] min-h-screen flex flex-col justify-center items-center text-white">
-      <div className="w-full max-w-4xl mx-auto px-4 py-12">
+    <div className=" min-h-screen flex flex-col justify-center items-center text-white">
+      <div
+        className="flex items-center justify-center"
+        style={{
+          backgroundImage: 'url(/images/background/Slider.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '80vh',
+        }}
+      >
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">Gold Investment</h1>
           <p className="text-lg font-medium">
@@ -13,6 +21,8 @@ const Gold = () => {
           we ensure that your investments are secure and profitable.
           </p>
         </div>
+        </div>
+        
 
         <div className="mt-16 bg-[#111a34] p-8 rounded-md">
           <h2 className="text-2xl font-bold mb-4">Gold Investment Services</h2>
@@ -75,7 +85,7 @@ const Gold = () => {
          
         </div>
       </div>
-    </div>
+    
   );
 };
 
