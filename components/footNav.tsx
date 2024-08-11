@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
           <img src="/images/logos/logo-main.png" alt="V-FTC Logo" className="h-10" />
           <div className="flex space-x-2 mt-6 h-16"> {/* Adjusted margin-top and height */}
             {socialIcons.map((icon, index) => (
-              <a href={icon.href} key={index} className="bg-gray-600 p-3 rounded-md hover:bg-gray-500"> {/* Increased padding */}
+              <a href={icon.href} key={index} className="bg-gray-600 py-4 px-4 rounded-md hover:bg-gray-500"> {/* Increased padding */}
                 <img
                   src={icon.src}
                   alt={icon.alt}
