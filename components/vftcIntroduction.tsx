@@ -39,9 +39,13 @@ const VFTCIntroduction: React.FC = () => {
         </div>
         
         {/* Increased Size Image Section */}
-        <div className="lg:w-2/3 h-100 w-120 p-4 flex justify-end">
-          <img src='/images/layout/tokendetails home right.png' alt="Introduction Image" className="max-w-full h-auto animate-float lg:h-[500px]" />
-        </div>
+<div className="lg:w-2/3 h-100 w-120 p-4 flex justify-end">
+  <img 
+    src='/images/layout/tokendetails home right.png' 
+    alt="Introduction Image" 
+    className="max-w-full h-auto animate-float lg:h-[700px] lg:w-[800px]" // Increased height and width
+  />
+</div>
       </div>
     </div>
   );

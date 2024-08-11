@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
           <img src="/images/logos/logo-main.png" alt="V-FTC Logo" className="h-10" />
           <div className="flex space-x-2 mt-6 h-16"> {/* Adjusted margin-top and height */}
             {socialIcons.map((icon, index) => (
-              <a href={icon.href} key={index} className="bg-gray-600 p-3 rounded-md hover:bg-gray-500"> {/* Increased padding */}
+              <a href={icon.href} key={index} className="bg-gray-600 py-4 px-4 rounded-md hover:bg-gray-500"> {/* Increased padding */}
                 <img
                   src={icon.src}
                   alt={icon.alt}
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center lg:text-left mt-8 lg:mt-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 lg:mt-0 text-left"> {/* Updated text alignment and grid */}
           {footerLinks.map((section, index) => (
             <div key={index}>
               <h4 className="font-semibold text-teal-300 mb-2 text-xl lg:text-2xl">{section.title}</h4>

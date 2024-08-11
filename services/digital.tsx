@@ -1,40 +1,83 @@
 import React from 'react';
 
-const Digital: React.FC = () => {
+const Digital = () => {
   return (
     <div className="bg-[#0c1f4a] min-h-screen flex flex-col justify-center items-center text-white">
       <div className="w-full max-w-4xl mx-auto px-4 py-12">
         <div className="text-center">
-          <h1 className="text-5xl font-bold mb-6">Investment Support</h1>
+          <h1 className="text-5xl font-bold mb-6">Digital Currency Investment Services</h1>
           <p className="text-lg font-medium">
-            We understand that successful investing requires more than just selecting the right assets.
-            It involves ongoing support, expert guidance, and access to the right tools and resources. 
-            Our comprehensive investment support services are designed to provide you with the assistance 
-            you need to navigate the complexities of the financial markets and achieve your investment objectives.
+          In today's rapidly evolving financial landscape, digital currencies have emerged as a significant asset class, offering unique opportunities for growth and diversification. At [Your Company Name], we provide comprehensive digital currency investment services tailored to meet the diverse needs of our clients.
           </p>
         </div>
 
         <div className="mt-16 bg-[#111a34] p-8 rounded-md">
-          <h2 className="text-2xl font-bold mb-4">Investment Support Services</h2>
+          <h2 className="text-2xl font-bold mb-4">Overview</h2>
 
           <div className="mb-6">
-            <h3 className="text-xl font-bold mb-2">Dedicated Account Managers:</h3>
+            <h3 className="text-xl font-bold mb-2">Portfolio Management:</h3>
             <p className="text-sm">
-              Each of our clients is paired with a dedicated account manager who provides personalized support and guidance.
-              Your account manager is your primary point of contact, offering tailored advice, answering your questions, 
-              and ensuring your investment strategy aligns with your goals.
+            Our expert team develops customized digital currency portfolios based on your risk tolerance, investment goals, and market outlook. We leverage advanced analytics and industry insights to optimize your investments in leading digital currencies promising digital assets.
             </p>
           </div>
 
           <div className="mb-6">
-            <h3 className="text-xl font-bold mb-2">Research And Analysis:</h3>
+            <h3 className="text-xl font-bold mb-2">Market Analysis and Research:</h3>
             <p className="text-sm">
-              Make informed investment decisions with our in-depth research and analysis. 
-              Our team of analysts provides regular reports on market trends, economic indicators, and emerging opportunities.
+            Stay ahead of the curve with our in-depth market analysis and research reports. We provide timely updates on market trends, regulatory developments, and emerging technologies to help you make informed investment decisions.
             </p>
           </div>
 
-          {/* Add more sections as needed */}
+          <div className="mb-6">
+            <h3 className="text-xl font-bold mb-2">Secure Trading Platforms:</h3>
+            <p className="text-sm">
+            We partner with reputable digital currency exchanges to offer secure and efficient trading platforms. Our platforms are equipped with state-of-the-art security features to protect your assets and ensure seamless transactions.            </p>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-bold mb-2">Risk Management:</h3>
+            <p className="text-sm">
+            Investing in digital currencies involves inherent risks. Our risk management strategies include portfolio diversification, stop-loss orders, and regular performance reviews to mitigate potential losses and enhance returns.            </p>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-bold mb-2">Educational Resources:</h3>
+            <p className="text-sm">
+            We believe in empowering our clients with knowledge. Our educational resources include webinars, workshops, and one-on-one consultations to help you understand the complexities of digital currency investments and stay updated with the latest market development            </p>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-bold mb-2">Expertise:</h3>
+            <p className="text-sm">
+            Our team of experienced professionals has a deep understanding of the digital currency market and a proven track record of successful investments.            </p>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-bold mb-2">Transparency:</h3>
+            <p className="text-sm">
+            We maintain full transparency in all our dealings, providing regular reports and updates on your investment performance.            </p>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-bold mb-2">Security:</h3>
+            <p className="text-sm">
+            Your investments are safeguarded with the highest level of security protocols to ensure the safety and integrity of your assets.            </p>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-bold mb-2">Customer Support:</h3>
+            <p className="text-sm">
+            Our dedicated support team is available around the clock to assist you with any queries or concerns. 
+            </p>        
+             </div>
+
+          <div className="mb-6">
+            <p className="text-bold">
+            Embark on your digital currency investment journey with [Your Company Name]. Contact us today to schedule a consultation with one of our experts and discover how we can help you achieve your financial goals through strategic digital currency investments.         
+            </p> 
+            </div>
+
+          
         </div>
       </div>
     </div>

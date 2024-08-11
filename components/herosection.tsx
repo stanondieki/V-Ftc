@@ -47,10 +47,15 @@ const HeroSection: React.FC = () => {
             <p className="mt-4 text-lg lg:text-xl">
               Tomorrow's Success Begins With Today's Investment. Invest With Confidence, Live With Abundance. 
                </p>
-               <Link href="/register"
-              className="mt-6 inline-block bg-gradient-to-r from-blue-500 to-pink-500 hover:from-pink-600 hover:to-blue-600 text-white font-bold py-5 px-16  rounded-full">
-              REGISTER & INVEST NOW
-            </Link>
+               <Link 
+  href="/register"
+  className="mt-6 inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-pink-500 hover:from-pink-600 hover:to-blue-600 text-white font-bold py-5 px-16 rounded-full text-lg"
+>
+  REGISTER & INVEST NOW
+  <span className="inline-flex items-center justify-center w-8 h-8 bg-white rounded-full ml-4 text-blue-600 text-3xl" style={{ transform: 'translateY(1px)' }}>
+    {''} {/* Right angle bracket */}
+  </span>
+</Link>
 
           </div>
 
