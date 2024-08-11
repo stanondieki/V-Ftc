@@ -2,7 +2,8 @@ import React from 'react';
 
 const Gold = () => {
   return (
-    <div className="bg-[#0c1f4a] min-h-screen flex flex-col justify-center items-center text-white">
+    <div className=" min-h-screen flex flex-col justify-center items-center text-white"
+    style={{ backgroundImage: 'url(/images/background/Slider.jpg)' }}>
       <div className="w-full max-w-4xl mx-auto px-4 py-12">
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">Gold Investment</h1>
