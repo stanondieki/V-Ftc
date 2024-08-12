@@ -2,7 +2,7 @@ import React from 'react';
 
 const Gold = () => {
   return (
-    <div className=" min-h-screen flex flex-col justify-center items-center text-white">
+    <div className="bg-[#0c1f4a] min-h-screen flex flex-col justify-center items-center text-white">
       <div
         className="flex items-center justify-center"
         style={{
@@ -24,7 +24,7 @@ const Gold = () => {
         </div>
         
 
-        <div className="mt-16 bg-[#111a34] p-8 rounded-md">
+        <div className="mt-16 bg-[#0a112b] p-8 rounded-md">
           <h2 className="text-2xl font-bold mb-4">Gold Investment Services</h2>
 
           <div className="mb-6">

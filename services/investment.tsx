@@ -2,7 +2,7 @@ import React from 'react';
 
 const Investment = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center text-white">
+    <div className="bg-[#0c1f4a] min-h-screen flex flex-col justify-center text-white">
       {/* Image Background Section */}
       <div
         className="flex items-center justify-center"

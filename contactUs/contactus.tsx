@@ -1,102 +1,180 @@
 import React from 'react';
-import { Box, Typography, Grid, Paper, IconButton } from '@mui/material';
+import { Box, Typography, Grid, IconButton } from '@mui/material';
 import { MailOutline, Phone, Telegram } from '@mui/icons-material';
 
 const ContactUs: React.FC = () => {
   return (
-    <Box sx={{ backgroundColor: '#0d0f28', color: '#fff', py: 8 }}>
+    <Box sx={{ backgroundColor: '#0a112b', color: '#fff', py: 8 }}>
       {/* Hero Section */}
       <Box
         sx={{
-          backgroundImage: 'url("/path-to-your-background-image.jpg")',
+          backgroundImage: 'url("/images/background/Slider.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           textAlign: 'center',
-          py: 6,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '300px',
         }}
       >
-        <Typography variant="h3" component="h1" sx={{ fontWeight: 'bold' }}>
-          Contact Us
-        </Typography>
-        <Typography variant="h6">
-          Don't forget to contact us if you need support instantly
-        </Typography>
+        <Box>
+          <Typography variant="h3" component="h1" sx={{ fontWeight: 'bold' }}>
+            Contact Us
+          </Typography>
+          <Typography variant="h6">
+            Don't forget to contact us if you need support instantly
+          </Typography>
+        </Box>
       </Box>
 
       {/* Contact Info Section */}
-      <Grid container justifyContent="center" sx={{ mt: 6 }}>
-        <Grid item xs={12} sm={8} md={6}>
-          <Paper
-            sx={{
-              backgroundColor: '#11133b',
-              p: 4,
-              borderRadius: 2,
-            }}
+      <Box
+        sx={{
+          backgroundColor: '#0a112b',
+          color: '#fff',
+          py: 6,
+          px: 4,
+        }}
+      >
+        <Grid container justifyContent="center">
+          <Grid
+            item
+            xs={12}
+            sm={10}
+            md={8} // Reduced width
+            sx={{ textAlign: 'left', maxWidth: '600px' }} // Constrained maxWidth
           >
-            <Typography variant="h4" component="h2" gutterBottom sx={{ fontWeight: 'bold' }}>
-              Contact Us
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 4 }}>
-              We are always open and we welcome any questions you have for our team. If you wish to get in touch, please fill out the form below.
-            </Typography>
-
-            {/* Email Section */}
-            <Box display="flex" alignItems="center" sx={{ mb: 4 }}>
-              <IconButton sx={{ color: '#f15a5b', mr: 2 }}>
-                <MailOutline fontSize="large" />
-              </IconButton>
-              <Typography variant="h6">support@swoopventures.com</Typography>
-            </Box>
-
-            {/* Phone Section */}
-            <Box display="flex" alignItems="center" sx={{ mb: 4 }}>
-              <IconButton sx={{ color: '#f15a5b', mr: 2 }}>
-                <Phone fontSize="large" />
-              </IconButton>
-              <Typography variant="h6">+1 305 705 5022</Typography>
-            </Box>
-
-            {/* Telegram Section */}
-            <Box display="flex" alignItems="center" sx={{ mb: 4 }}>
-              <IconButton sx={{ color: '#f15a5b', mr: 2 }}>
-                <Telegram fontSize="large" />
-              </IconButton>
-              <Typography variant="h6">
-                <a href="https://t.me/vftcofficial" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', textDecoration: 'none' }}>
-                  https://t.me/vftcofficial
-                </a>
+            <Box>
+              <Typography
+                variant="h4"
+                component="h2"
+                gutterBottom
+                sx={{ fontWeight: 'bold' }}
+              >
+                Contact Us
               </Typography>
-            </Box>
-
-            {/* Address Section */}
-            <Box sx={{ mt: 4 }}>
-              <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 2 }}>
-                Addresses
+              <Typography
+                variant="body1"
+                sx={{ mb: 4, maxWidth: '50%' }} // Matching the width of the horizontal line
+              >
+                We are always open and we welcome any questions you have for our team. If you wish to get in touch, please fill out the form below.
               </Typography>
 
-              <Box sx={{ mb: 3 }}>
+              {/* Email Section */}
+              <Box display="flex" alignItems="center" sx={{ mb: 4 }}>
+                <IconButton
+                  sx={{
+                    color: '#fff',
+                    mr: 2,
+                    border: '4px solid', // Increased distance from icons to rings
+                    borderColor: 'linear-gradient(135deg, #f50057, #4fc3f7)', // Pink to light blue variation
+                    borderRadius: '50%',
+                    padding: '8px',
+                  }}
+                >
+                  <MailOutline fontSize="large" />
+                </IconButton>
+                <Typography variant="h6">support@swoopventures.com</Typography>
+              </Box>
+
+              {/* Phone Section */}
+              <Box display="flex" alignItems="center" sx={{ mb: 4 }}>
+                <IconButton
+                  sx={{
+                    color: '#fff',
+                    mr: 2,
+                    border: '4px solid', // Increased distance from icons to rings
+                    borderColor: 'linear-gradient(135deg, #f50057, #4fc3f7)', // Pink to light blue variation
+                    borderRadius: '50%',
+                    padding: '8px',
+                  }}
+                >
+                  <Phone fontSize="large" />
+                </IconButton>
                 <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                  Headquarters
-                </Typography>
-                <Typography variant="body1">
-                  600 Pennsylvania Avenue, NW Washington, DC 20580<br />
-                  Telephone: (202) 326-2222
+                  +1 305 705 5022
                 </Typography>
               </Box>
 
-              <Box>
-                <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                  Constitution Center
-                </Typography>
-                <Typography variant="body1">
-                  400 7th St., SW Washington, DC 20024<br />
-                  Telephone: (202) 326-2222
+              {/* Telegram Section */}
+              <Box display="flex" alignItems="center" sx={{ mb: 4 }}>
+                <IconButton
+                  sx={{
+                    color: '#fff',
+                    mr: 2,
+                    border: '4px solid', // Increased distance from icons to rings
+                    borderColor: 'linear-gradient(135deg, #f50057, #4fc3f7)', // Pink to light blue variation
+                    borderRadius: '50%',
+                    padding: '8px',
+                  }}
+                >
+                  <Telegram fontSize="large" />
+                </IconButton>
+                <Typography variant="h6">
+                  <a
+                    href="https://t.me/vftcofficial"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: '#fff', textDecoration: 'none' }}
+                  >
+                    https://t.me/vftcofficial
+                  </a>
                 </Typography>
               </Box>
+
+              {/* Horizontal Line above Addresses */}
+              <Box
+                sx={{
+                  borderBottom: '1px solid #fff',
+                  my: 4,
+                  maxWidth: '50%', // Reduced the length of the horizontal line
+                }}
+              />
+
+              {/* Address Section */}
+              <Box sx={{ mt: 4 }}>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontWeight: 'bold',
+                    mb: 2,
+                    fontSize: '2.5rem',
+                  }}
+                >
+                  Addresses
+                </Typography>
+
+                <Box sx={{ mb: 3 }}>
+                  <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+                    Headquarters
+                  </Typography>
+                  <Typography variant="body1">
+                    600 Pennsylvania Avenue,<br />
+                    NW Washington, DC 20580<br />
+                    <Typography component="span">
+                      Telephone: (202) 326-2222
+                    </Typography>
+                  </Typography>
+                </Box>
+
+                <Box>
+                  <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+                    Constitution Center
+                  </Typography>
+                  <Typography variant="body1">
+                    400 7th St.,<br />
+                    SW Washington, DC 20024<br />
+                    <Typography component="span">
+                      Telephone: (202) 326-2222
+                    </Typography>
+                  </Typography>
+                </Box>
+              </Box>
             </Box>
-          </Paper>
+          </Grid>
         </Grid>
-      </Grid>
+      </Box>
     </Box>
   );
 };

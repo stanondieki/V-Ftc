@@ -1,62 +1,72 @@
 import React from 'react';
-import { Box, Typography, Grid, Button } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
 
 const AppDownload: React.FC = () => {
   return (
-    <Box sx={{ backgroundColor: '#0d0f28', color: '#fff', py: 8 }}>
+    <Box sx={{ backgroundColor: '#0d0f28', color: '#fff', minHeight: '40vh', py: 8 }}> {/* Further reduced screen height */}
       {/* Hero Section */}
       <Box
         sx={{
-          backgroundImage: 'url("/path-to-your-background-image.jpg")',
+          backgroundImage: 'url("/images/background/Slider.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           textAlign: 'center',
-          py: 6,
+          py: 15, // Further adjusted the height of the image section
         }}
       >
-        <Typography variant="h3" component="h1" sx={{ fontWeight: 'bold' }}>
-          App Download
-        </Typography>
-        <Typography variant="h6">
-          Download your desired apps for better performance
-        </Typography>
+        <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
+          <Typography variant="h3" component="h1" sx={{ fontWeight: 'bold' }}>
+            App Download
+          </Typography>
+          <Typography variant="h6">
+            Download your desired apps for better performance
+          </Typography>
+        </Box>
       </Box>
 
       {/* Download Buttons */}
-      <Grid container justifyContent="center" sx={{ mt: 6 }}>
-        <Grid item xs={6} sm={4} md={3} textAlign="center">
+      <Box sx={{ mt: 6, position: 'relative', height: '50px' }}>
+        <Box sx={{ position: 'absolute', left: 20 }}> {/* Moved buttons slightly from the sides */}
           <Button
             variant="contained"
             sx={{
-              background: 'linear-gradient(to right, #ff416c, #ff4b2b)',
+              background: 'linear-gradient(to right, #0000ff, #ff00ff)', // Blue to Pink
               color: '#fff',
-              borderRadius: '50px',
+              borderRadius: '8px',
               px: 4,
-              py: 2,
+              py: 1,
               fontSize: '1.25rem',
               textTransform: 'none',
+              transition: 'background 0.3s ease-in-out',
+              '&:hover': {
+                background: 'linear-gradient(to right, #ff00ff, #0000ff)', // Pink to Blue on hover
+              },
             }}
           >
             Android
           </Button>
-        </Grid>
-        <Grid item xs={6} sm={4} md={3} textAlign="center">
+        </Box>
+        <Box sx={{ position: 'absolute', right: 20 }}> {/* Moved buttons slightly from the sides */}
           <Button
             variant="contained"
             sx={{
-              background: 'linear-gradient(to right, #5a00ff, #4b0082)',
+              background: 'linear-gradient(to right, #0000ff, #ff00ff)', // Blue to Pink
               color: '#fff',
-              borderRadius: '50px',
+              borderRadius: '8px',
               px: 4,
-              py: 2,
+              py: 1,
               fontSize: '1.25rem',
               textTransform: 'none',
+              transition: 'background 0.3s ease-in-out',
+              '&:hover': {
+                background: 'linear-gradient(to right, #ff00ff, #0000ff)', // Pink to Blue on hover
+              },
             }}
           >
             iOS
           </Button>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </Box>
   );
 };
