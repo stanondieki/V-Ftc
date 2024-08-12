@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 const Login: React.FC = () => {
@@ -121,9 +122,11 @@ const Login: React.FC = () => {
       </div>
       {/* HOME Button */}
       <div className="absolute bottom-2 right-2">
+        <Link href="/">
         <button className="bg-gradient-to-r from-blue-500 to-pink-500 text-white font-bold py-2 px-10 rounded-bl-2xl rounded-tr-2xl hover:bg-blue-800 transition-colors duration-300">
           Home
         </button>
+        </Link>
       </div>
     </div>
   );
