@@ -2,7 +2,7 @@ import React from 'react';
 
 const Forex: React.FC = () => {
   return (
-    <div className=" min-h-screen flex flex-col justify-center items-center text-white">
+    <div className="bg-[#0c1f4a] min-h-screen flex flex-col justify-center items-center text-white">
       <div
         className="flex items-center justify-center"
         style={{
