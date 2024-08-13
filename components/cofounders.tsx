@@ -25,7 +25,7 @@ const CoFoundersSection: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gray-900 min-h-screen flex flex-col items-center justify-center py-12">
+    <div className="bg-blue-950 min-h-screen flex flex-col items-center justify-center py-12">
       <h1 className="text-5xl font-md mb-4 text-white">World Leading Co-Founders</h1>
       <p className="text-white mb-8 text-center">
         We are supported and guided by world leaders who have been in this field for several years

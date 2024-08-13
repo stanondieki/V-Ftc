@@ -2,7 +2,7 @@ import React from 'react';
 
 const Privacy = () => {
   return (
-    <div className="bg-[#0c1f4a] min-h-screen text-white">
+    <div className=" min-h-screen text-white" style={{ backgroundColor: '#050231' }}>
       {/* Hero Section */}
       <div className="w-full flex justify-center bg-cover bg-center" style={{ height: '400px' }}>
         <div

@@ -2,8 +2,16 @@ import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 
 const AppDownload: React.FC = () => {
+  // Hard-coded links
+  const androidLink = 'https://swoopventures.com/v-ftc_signed.apk';
+  const iosLink = 'https://swoopventures.com/vftc.mobileconfig';
+
+  const handleButtonClick = (link: string) => {
+    window.location.href = link;
+  };
+
   return (
-    <Box sx={{ backgroundColor: '#0d0f28', color: '#fff', minHeight: '40vh', py: 8 }}> {/* Further reduced screen height */}
+    <Box sx={{ backgroundColor: '#0d0f28', color: '#fff', minHeight: '40vh', py: 2 }}>
       {/* Hero Section */}
       <Box
         sx={{
@@ -11,7 +19,7 @@ const AppDownload: React.FC = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           textAlign: 'center',
-          py: 15, // Further adjusted the height of the image section
+          py: 15,
         }}
       >
         <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
@@ -25,12 +33,12 @@ const AppDownload: React.FC = () => {
       </Box>
 
       {/* Download Buttons */}
-      <Box sx={{ mt: 6, position: 'relative', height: '50px' }}>
-        <Box sx={{ position: 'absolute', left: 20 }}> {/* Moved buttons slightly from the sides */}
+      <Box sx={{ mt: 6, display: 'flex', justifyContent: 'space-between', px: 4 }}>
+        <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-start' }}>
           <Button
             variant="contained"
             sx={{
-              background: 'linear-gradient(to right, #0000ff, #ff00ff)', // Blue to Pink
+              background: 'linear-gradient(to right, #0000ff, #ff00ff)',
               color: '#fff',
               borderRadius: '8px',
               px: 4,
@@ -39,18 +47,21 @@ const AppDownload: React.FC = () => {
               textTransform: 'none',
               transition: 'background 0.3s ease-in-out',
               '&:hover': {
-                background: 'linear-gradient(to right, #ff00ff, #0000ff)', // Pink to Blue on hover
+                background: 'linear-gradient(to right, #ff00ff, #0000ff)',
               },
+              // Fixed width for the button
+              width: '150px', // Set your desired width
             }}
+            onClick={() => handleButtonClick(androidLink)}
           >
             Android
           </Button>
         </Box>
-        <Box sx={{ position: 'absolute', right: 20 }}> {/* Moved buttons slightly from the sides */}
+        <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>
           <Button
             variant="contained"
             sx={{
-              background: 'linear-gradient(to right, #0000ff, #ff00ff)', // Blue to Pink
+              background: 'linear-gradient(to right, #0000ff, #ff00ff)',
               color: '#fff',
               borderRadius: '8px',
               px: 4,
@@ -59,9 +70,12 @@ const AppDownload: React.FC = () => {
               textTransform: 'none',
               transition: 'background 0.3s ease-in-out',
               '&:hover': {
-                background: 'linear-gradient(to right, #ff00ff, #0000ff)', // Pink to Blue on hover
+                background: 'linear-gradient(to right, #ff00ff, #0000ff)',
               },
+              // Fixed width for the button
+              width: '150px', // Set your desired width
             }}
+            onClick={() => handleButtonClick(iosLink)}
           >
             iOS
           </Button>
