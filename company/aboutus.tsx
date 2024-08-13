@@ -36,7 +36,7 @@ const About = () => {
   const cardBackgroundImagePath = '/images/background/platform-bg.jpg'; // Update with your actual image path
 
   const handlePlayClick = () => {
-    window.open('https://www.youtube.com/watch?v=VIDEO_ID', '_blank');
+    window.open('https://youtu.be/Cbb3ri72nCw', '_blank');
   };
 
   return (
@@ -134,48 +134,73 @@ const About = () => {
 
       {/* Mission and Features Section */}
       <section>
-        <div
-          className="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0 md:space-x-8 p-8 bg-purple-700 mt-12"
-          style={{
-            backgroundImage: `url(${frameImagePath})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            borderRadius: '10px',
-            backgroundColor: '#130F40'
-          }}
-        >
-          {/* Our Mission Section */}
-          <div className="flex-1">
-            <h2 className="text-5xl font-bold mb-4">Our Mission</h2>
-            <p className="text-lg font-medium leading-relaxed">
-              At V-FTC, our mission is to empower investors by providing diverse, high-quality investment opportunities 
-              and the necessary tools to achieve financial success. We are dedicated to creating a secure, user-friendly 
-              platform that caters to both novice and experienced investors.
-            </p>
-          </div>
-          {/* Features Section */}
-          <div className="flex-1">
-            <h2 className="text-3xl font-bold mb-4">Features</h2>
-            <div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-4">
-              {/* Feature 1 */}
-              <div className="relative p-6 flex-1 text-center">
-                <img src="/images/icons/buy.png" alt="Buy and Sell" className="mx-auto mb-4" />
-                <h3 className="text-xl font-semibold">Buy and sell items easily</h3>
-              </div>
-              {/* Feature 2 */}
-              <div className="relative p-6 flex-1 text-center">
-                <img src="/images/icons/create.png" alt="Create Collections" className="mx-auto mb-4" />
-                <h3 className="text-xl font-semibold">Create collections & earn rewards</h3>
-              </div>
-              {/* Feature 3 */}
-              <div className="relative p-6 flex-1 text-center">
-                <img src="/images/icons/chase.png" alt="Chase Limited Edition" className="mx-auto mb-4" />
-                <h3 className="text-xl font-semibold">Chase limited edition V-FTC</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div
+    className="flex flex-col md:flex-row justify-between items-start p-8 bg-purple-700 mt-12"
+    style={{
+      backgroundImage: `url(${frameImagePath})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      borderRadius: '10px',
+      backgroundColor: '#130F40',
+    }}
+  >
+    {/* Our Mission Section */}
+    <div className="flex-none" style={{ maxWidth: '40%', maxHeight:'30%' }}>
+      <h2 className="text-5xl font-bold mb-4">Our Mission</h2>
+      <p className="text-lg font-medium leading-relaxed">
+        At V-FTC, our mission is to empower investors by providing diverse, high-quality investment opportunities 
+        and the necessary tools to achieve financial success. We are dedicated to creating a secure, user-friendly 
+        platform that caters to both novice and experienced investors.
+      </p>
+    </div>
+
+    {/* Features Section */}
+    <div className="flex flex-1 justify-between items-center space-x-4 mt-8 md:mt-0">
+      {/* Feature 1 */}
+      <div className="relative text-center">
+        <img 
+          src="/images/background/bg-iconbox.png" 
+          alt="Buy and Sell" 
+          className="w-full h-32" 
+          style={{ height: '150px' }}  
+        />
+        <h3 className="absolute inset-0 flex items-center justify-center text-xl font-semibold text-white">
+          Buy and sell items easily
+        </h3>
+      </div>
+      {/* Feature 2 */}
+      <div className="relative text-center">
+        <img 
+          src="/images/background/bg-iconbox.png" 
+          alt="Create Collections" 
+          className="w-full h-32" 
+          style={{ height: '150px' }}  
+        />
+        <h3 className="absolute inset-0 flex items-center justify-center text-xl font-semibold text-white">
+          Create collections & earn rewards
+        </h3>
+      </div>
+      {/* Feature 3 */}
+      <div className="relative text-center">
+        <img 
+          src="/images/background/bg-iconbox.png" 
+          alt="Chase Limited Edition" 
+          className="w-full h-32" 
+          style={{ height: '150px' }}  
+        />
+        <h3 className="absolute inset-0 flex items-center justify-center text-xl font-semibold text-white">
+          Chase limited edition V-FTC
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 
       <section className="flex justify-center items-center h-[50vh] mt-10" >
         <div className="text-center">
@@ -226,9 +251,9 @@ const About = () => {
       </div>
 
       {/* Advanced Technology and Tools Text */}
-      <div className="flex-1 pl-20 text-left" style={{ maxWidth: '350px', marginTop: '30px', marginRight: '20px' }}>
-        <h5 className="font-bold mt-12" style={{ color: '#9e219e' }}>ABOUT US</h5>
-        <h3 className="text-4xl font-extrabold mb-4">ADVANCED TECHNOLOGY AND TOOLS</h3>
+      <div className="flex-1 pl-20 text-left" style={{ maxWidth: '500px', marginTop: '30px', marginRight: '20px' }}>
+        <h5 className="font-bold text-2xl mt-12" style={{ color: '#9e219e' }}>ABOUT US</h5>
+        <h3 className="text-4xl font-bold mb-4">ADVANCED TECHNOLOGY AND TOOLS</h3>
         <p className="text-lg font-medium mb-12" style={{ margin: '0' }}>
           We leverage cutting-edge technology to offer real-time data, advanced trading tools, and comprehensive market analysis. Our platform is designed to be intuitive and accessible, ensuring that users can make informed decisions and execute trades efficiently.
         </p>
@@ -285,7 +310,7 @@ const About = () => {
             title="Minerals"
             content="Gold and Other Minerals: In addition to gold, we offer investment opportunities in other valuable minerals such as silver, crude oil, and natural gas, providing a comprehensive suite of options for resource-based investments."
             iconSrc="/images/icons/icon3.png" // Update with your actual icon path
-            className="text-white"
+            className="text-red"
           />
         </div>
       </section>

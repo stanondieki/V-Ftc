@@ -28,7 +28,7 @@ const Investment = () => {
       </div>
 
       {/* Lower Section with Blue Background and Left-Aligned Content */}
-      <div className=" p-8 w-full" style={{ backgroundColor: '#091329' }}>
+      <div className=" p-8 w-full" style={{ backgroundColor: '#050231' }}>
         <h2 className="text-2xl font-bold mb-4">Investment Support Services</h2>
 
         {/* List of Support Services */}

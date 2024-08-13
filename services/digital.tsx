@@ -32,7 +32,7 @@ const Digital = () => {
       </div>
       
       {/* Second Division with Custom Background Color */}
-      <div className="mt-16 p-8" style={{ backgroundColor: '#091329' }}>
+      <div className="mt-16 p-8" style={{ backgroundColor: '#050231' }}>
         <h2 className="text-2xl font-bold mb-4">Overview</h2>
 
         <div className="mb-6">
