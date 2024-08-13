@@ -67,7 +67,7 @@ const TokenDistribution: React.FC = () => {
     };
 
     return (
-        <div className="bg-[#0D0B1E] text-white p-12 text-center min-h-screen">
+        <div className=" text-white p-12 text-center min-h-screen" style={{ backgroundColor: '#130F40'}}>
             <h2 className="text-4xl mb-4">Token Allocation & Funds Distribution</h2>
             <p className="text-lg mb-8">
                 Join the industry leaders to discuss where the markets are heading. We accept token payments.

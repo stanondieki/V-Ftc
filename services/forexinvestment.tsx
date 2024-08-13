@@ -3,8 +3,8 @@ import React from 'react';
 const Forex: React.FC = () => {
   return (
     <div 
-      className="bg-[#0c1f4a] min-h-screen flex flex-col items-center text-white"
-      style={{ alignItems: 'flex-start' }} 
+      className="min-h-screen flex flex-col items-center text-white"
+      style={{ alignItems: 'flex-start', backgroundColor: '#050231' }}  
     >
       {/* Image Background Section */}
       <div
