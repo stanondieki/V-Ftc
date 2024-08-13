@@ -31,7 +31,7 @@ const DocumentsSection: React.FC = () => {
               <div
                 className={`relative z-5 border-2 border-white rounded-lg p-6 flex flex-col justify-between transform transition-all duration-300 group-hover:-translate-x-2 group-hover:-translate-y-2 h-60 w-40`}
                 style={{
-                  backgroundImage: index === 0 ? 'linear-gradient(to bottom, #001f3f, #ff7b7b)' : index === 1 ? 'url(${/images/documents/document-box (3).png})' : `linear-gradient(to bottom right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${doc.backgroundImage})`,
+                  backgroundImage: index === 0 ? 'linear-gradient(to bottom, #001f3f, #ff7b7b)' : index === 1 ? 'url(${/images/background/document-box.png})' : `linear-gradient(to bottom right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${doc.backgroundImage})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   position: 'relative',

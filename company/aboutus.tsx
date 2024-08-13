@@ -1,33 +1,40 @@
 import Link from 'next/link';
 import React from 'react';
 import { BsPhone } from 'react-icons/bs';
-import { FaGlobe, FaUsers } from 'react-icons/fa6';
+import { FaGlobe, FaShield, FaUsers } from 'react-icons/fa6';
 import Style from '@/styles/home.module.css';
+import { GoShieldLock, GoBrowser } from "react-icons/go";
+import { FaMobileScreenButton } from "react-icons/fa6";
+import { FaArrowUpRightDots, FaCalendarDays } from "react-icons/fa6";
+import { BiHive } from "react-icons/bi";
+import { ArrowUpward } from '@mui/icons-material';
 
 // Card Component
 const Card = ({
   
   title,
   content,
-  iconSrc,
+  icon,
   link,
   className,
 }: {
   title: string;
   content: string;
-  iconSrc?: string; // Optional icon source
+  icon?: React.ReactNode;  // Optional icon source
   link?: string;
   className: string;
 }) => (
-  <div className="relative p-6 border rounded-lg shadow-lg w-full max-w-xs mx-auto bg-transparent">
-    {/* Icon Container */}
-    {iconSrc && (
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-2">
-        <img src={iconSrc} alt="Icon" className="w-8 h-8" />
+  <div className={`relative p-6 rounded-lg shadow-lg w-full max-w-xs mx-auto bg-transparent ${className}`} style={{ minHeight: '300px' }}>
+    {/* Icon Container at the top */}
+    {icon && (
+      <div className="flex justify-center mb-4">
+        <div className="bg-blue-500 rounded-full p-2">
+          {icon}
+        </div>
       </div>
     )}
-    <h3 className="text-xl font-semibold mb-4 text-center">{title}</h3>
-    <p className="text-gray-700 text-center">{content}</p>
+    <h3 className="text-xl font-bold mb-4 text-center">{title}</h3>
+    <p className="text-white text-center">{content}</p>
   </div>
 );
 
@@ -297,19 +304,31 @@ const About = () => {
     <Card
       title="Stocks"
       content="We provide access to a wide range of stocks, enabling investors to build diversified portfolios and benefit from market growth."
-      iconSrc="/images/icons/icon1.png" // Update with your actual icon path
+      icon={
+        <Link href="/">
+          <GoShieldLock size={50} color="white" />
+        </Link>
+      }
       className="text-white"
     />
     <Card
       title="Forex"
       content="Our forex trading services enable investors to trade major currency pairs, taking advantage of the liquidity and volatility in the foreign exchange market."
-      iconSrc="/images/icons/icon2.png" // Update with your actual icon path
+      icon={
+        <Link href="/">
+          <GoBrowser size={50} color="white" />
+        </Link>
+      }
       className="text-white"
     />
     <Card
       title="Minerals"
       content="Gold and Other Minerals: In addition to gold, we offer investment opportunities in other valuable minerals such as silver, crude oil, and natural gas, providing a comprehensive suite of options for resource-based investments."
-      iconSrc="/images/icons/icon3.png" // Update with your actual icon path
+      icon={
+        <Link href="/">
+          <FaMobileScreenButton size={50} color="white" />
+        </Link>
+      }
       className="text-red"
     />
   </div>
@@ -434,6 +453,7 @@ const About = () => {
       V-FTC quickly grew to reach 10,000 users within its first year,
       demonstrating its reliability and trustworthiness in the investment industry."
       className="text-white"
+      icon=""
     />
     <Card
       title="Diverse Investment Portfolio"
@@ -441,6 +461,7 @@ const About = () => {
       forex, gold, and other valuable minerals like silver, crude oil, and natural gas. 
       Our platform supports both short-term and long-term trading strategies, catering to various investment goals and preferences."
       className="text-white"
+      icon=""
     />
     <Card
       title="Expertise in Trading and Mining"
@@ -449,6 +470,7 @@ const About = () => {
       Leveraging advanced technology and robust security measures, we provide a secure and efficient investment environment,
       ensuring our clients have the tools and support needed to succeed."
       className="text-white"
+      icon=""
     />
   </div>
 </section>
@@ -493,19 +515,31 @@ const About = () => {
     <Card
       title="Digital Currency Trading"
       content="V-FTC helps customers to deal with digital currency short and long term trade for standard profit margin"
-      iconSrc="/images/icons/icon1.png"
+      icon={
+        <Link href="/">
+          <FaShield size={50} color="white" />
+        </Link>
+      }
       className="text-white"
     />
     <Card
       title="Digital Currency Mining"
       content="The platform helps investors to make it easy to purchase and invest in the mining sector"
-      iconSrc="/images/icons/icon2.png"
+      icon={
+        <Link href="/">
+          <FaArrowUpRightDots size={50} color="white" />
+        </Link>
+      }
       className="text-white"
     />
     <Card
       title="Minerals Trading"
       content="V-FTC has most popular Minerals trading like Gold, Silver, Crude Oil, Natural Gas"
-      iconSrc="/images/icons/icon3.png"
+      icon={
+        <Link href="/">
+          <FaCalendarDays size={50} color="white" />
+        </Link>
+      }
       className="text-white"
     />
   </div>
@@ -523,19 +557,31 @@ const About = () => {
     <Card
       title="Minerals Mining"
       content="The process of taking into account the collective opinion of a group."
-      iconSrc="/images/icons/icon1.png"
+      icon={
+        <Link href="/">
+          <FaMobileScreenButton size={50} color="white" />
+        </Link>
+      }
       className="text-white"
     />
     <Card
       title="Stocks Investment"
       content="We have the most popular Stocks investment like Tesla, Apple, Amazon, Google, Meta. The system pays a bonus for excellent individuals conveniently."
-      iconSrc="/images/icons/icon2.png"
+      icon={
+        <Link href="/">
+          <FaUsers size={50} color="white" />
+        </Link>
+      }
       className="text-white"
     />
     <Card
       title="Forex Trading"
       content="We provide our investors with safe and secure Forex trading with market analyst guidance."
-      iconSrc="/images/icons/icon3.png"
+      icon={
+        <Link href="/">
+          <GoBrowser size={50} color="white" />
+        </Link>
+      }
       className="text-white"
     />
   </div>
