@@ -2,28 +2,37 @@ import React from 'react';
 
 const Digital = () => {
   return (
-    <div className=" bg-[#0c1f4a] min-h-screen flex flex-col text-white">
+    <div className="min-h-screen flex flex-col text-white">
       
       {/* First Division with Background Image */}
       <div
-        className="flex justify-center items-center text-center"
+        className="flex justify-center items-center text-center relative"
         style={{
-          backgroundImage: 'url(/images/background/Slider.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
           height: '80vh',
+          backgroundColor: '' // Fallback color for background image
         }}
       >
-        <div className="px-4">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url(/images/background/Slider.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            height: '100%',
+            width: '100%',
+            zIndex: -1, // Place image behind content
+          }}
+        />
+        <div className="relative px-4">
           <h1 className="text-5xl font-bold mb-6">Digital Currency Investment Services</h1>
-          <p className="text-lg font-medium">
+          <p className="text-lg font-medium" style={{ maxWidth: '700px' }}>
             In today's rapidly evolving financial landscape, digital currencies have emerged as a significant asset class, offering unique opportunities for growth and diversification. At [Your Company Name], we provide comprehensive digital currency investment services tailored to meet the diverse needs of our clients.
           </p>
         </div>
       </div>
       
-      {/* Second Division with Blue Background */}
-      <div className="mt-16 bg-blue-600 p-8">
+      {/* Second Division with Custom Background Color */}
+      <div className="mt-16 p-8" style={{ backgroundColor: '#091329' }}>
         <h2 className="text-2xl font-bold mb-4">Overview</h2>
 
         <div className="mb-6">

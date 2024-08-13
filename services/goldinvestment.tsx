@@ -14,7 +14,7 @@ const Gold = () => {
       >
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">Gold Investment</h1>
-          <p className="text-lg font-medium">
+          <p className="text-lg font-medium " style={{ maxWidth: '700px' }}>
           We offer a robust and comprehensive gold investment service, 
           catering to both novice and experienced investors. As a reliable and US 
           government-authorized sub-trading company under the US Federal Trade Commission, 
@@ -24,7 +24,7 @@ const Gold = () => {
         </div>
         
 
-        <div className="mt-16 bg-[#0a112b] p-8 rounded-md">
+        <div className="mt-16  p-8 rounded-md" style={{ backgroundColor: '#091329' }}>
           <h2 className="text-2xl font-bold mb-4">Gold Investment Services</h2>
 
           <div className="mb-6">

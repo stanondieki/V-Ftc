@@ -15,14 +15,14 @@ const Stock = () => {
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">Stock Investment</h1>
           <div className="max-w-lg mx-auto">
-            <p className="text-lg font-medium">
+            <p className="text-lg font-medium" style={{ maxWidth: '700px' }}>
               Our Stock Investment Service is designed to help individuals and institutions achieve their financial goals through strategic investments in the stock market. Leveraging our expertise, advanced analytics, and comprehensive research, we provide tailored solutions to meet the diverse needs of our clients.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="mt-20 bg-[#111a34] p-8 rounded-md"> {/* Increased margin-top */}
+      <div className="mt-20 p-8 rounded-md" style={{ backgroundColor: '#091329' }}> {/* Increased margin-top */}
         <h2 className="text-2xl font-bold mb-4">Personalized Investment Plans</h2>
 
         <div className="mb-6">
@@ -39,7 +39,7 @@ const Stock = () => {
           </p>
         </div>
 
-        <div className="mt-16 bg-[#111a34] p-8 rounded-md">
+        <div className="mt-16  p-8 rounded-md">
           <h2 className="text-2xl font-bold mb-4">Research and Analysis</h2>
 
           <div className="mb-6">
@@ -56,7 +56,7 @@ const Stock = () => {
             </p>
           </div>
 
-          <div className="mt-16 bg-[#111a34] p-8 rounded-md">
+          <div className="mt-16  p-8 rounded-md">
             <h2 className="text-2xl font-bold mb-4">Expert Guidance</h2>
 
             <div className="mb-6">
@@ -73,7 +73,7 @@ const Stock = () => {
               </p>
             </div>
 
-            <div className="mt-16 bg-[#111a34] p-8 rounded-md">
+            <div className="mt-16  p-8 rounded-md">
               <h2 className="text-2xl font-bold mb-4">Advanced Trading Platforms</h2>
 
               <div className="mb-6">
@@ -90,7 +90,7 @@ const Stock = () => {
                 </p>
               </div>
 
-              <div className="mt-16 bg-[#111a34] p-8 rounded-md">
+              <div className="mt-16 p-8 rounded-md">
                 <h2 className="text-2xl font-bold mb-4">Performance Monitoring</h2>
 
                 <div className="mb-6">
@@ -107,7 +107,7 @@ const Stock = () => {
                   </p>
                 </div>
 
-                <div className="mt-16 bg-[#111a34] p-8 rounded-md">
+                <div className="mt-16  p-8 rounded-md">
                   <h2 className="text-2xl font-bold mb-4">Risk Management</h2>
 
                   <div className="mb-6">
@@ -124,7 +124,7 @@ const Stock = () => {
                     </p>
                   </div>
 
-                  <div className="mt-16 bg-[#111a34] p-8 rounded-md">
+                  <div className="mt-16  p-8 rounded-md">
                     <h2 className="text-2xl font-bold mb-4">Why Choose Us?</h2>
 
                     <div className="mb-6">

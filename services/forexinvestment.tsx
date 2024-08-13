@@ -2,7 +2,7 @@ import React from 'react';
 
 const Forex: React.FC = () => {
   return (
-    <div className="bg-[#0c1f4a] min-h-screen flex flex-col justify-center items-center text-white">
+    <div className=" min-h-screen flex flex-col justify-center items-center text-white" style={{ backgroundColor: '#091329' }}>
       <div
         className="flex items-center justify-center"
         style={{
@@ -14,7 +14,7 @@ const Forex: React.FC = () => {
       >
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-6">Forex Investment Service</h1>
-          <p className="text-lg font-medium">
+          <p className="text-lg font-medium " style={{ maxWidth: '700px' }}>
             Our Forex Investment Service offers clients an opportunity to
             participate in the dynamic and potentially lucrative foreign
             exchange market. By leveraging our expertise, advanced trading
