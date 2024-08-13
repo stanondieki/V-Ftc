@@ -22,7 +22,6 @@ const Card = ({
       <p className="text-white text-center">{content}</p>
     </div>
   );
-  
 
 const VftcPage = () => {
     return (

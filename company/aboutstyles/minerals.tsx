@@ -3,7 +3,6 @@ import { GoBrowser } from "react-icons/go";
 import { FaMobileScreenButton } from "react-icons/fa6";
 import { FaUsers } from 'react-icons/fa6';
 
-
 const Card = ({
     title,
     content,
