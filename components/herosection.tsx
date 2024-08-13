@@ -56,7 +56,6 @@ const HeroSection: React.FC = () => {
     {''} {/* Right angle bracket */}
   </span>
 </Link>
-
           </div>
 
           <div className="mt-12 lg:mt-0 lg:w-2/5 border border-cyan-400 rounded-lg">

@@ -4,7 +4,7 @@ import Introimage from 'path/to/your/image.png'; // Adjust the import path to yo
 
 const VFTCIntroduction: React.FC = () => {
   return (
-    <div className="bg-[#0D0B1E] min-h-screen flex flex-col py-8">
+    <div className=" min-h-screen flex flex-col py-8" style={{ backgroundColor: '#130F40'}}>
       <div className="text-white text-center mb-8">
         <h1 className="text-4xl font-bold mb-4">V-FTC Introduction</h1>
         <p>V-FTC is one of the most trusted investment companies all around the world</p>
@@ -12,7 +12,7 @@ const VFTCIntroduction: React.FC = () => {
       <div className="text-white flex flex-col lg:flex-row">
         {/* Reduced Width Content Section */}
         <div className="lg:w-90 p-4"> {/* Changed width back to lg:w-1/3 */}
-          <div className="bg-[#1C1B2B] rounded-lg p-6 shadow-lg">
+          <div className="bg-[#151B54] rounded-lg p-6 shadow-lg">
             <div className="space-y-8">
               <div className="bg-gradient-to-r from-[#3D4DB7] to-[#A03D85] p-4 rounded-lg">
                 <h2 className="text-2xl font-semibold">Inception</h2>

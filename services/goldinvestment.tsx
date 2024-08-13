@@ -3,18 +3,32 @@ import React from 'react';
 const Gold = () => {
   return (
     <div className="bg-[#0c1f4a] min-h-screen flex flex-col justify-center items-center text-white">
-      <div className="w-full max-w-4xl mx-auto px-4 py-12">
-        <div className="text-center">
+    {/* Image Background Section */}
+    <div
+      className="w-full max-w-none mx-auto px-4 py-12 relative"
+      style={{
+        backgroundImage: 'url(/images/background/Slider.jpg)',
+        backgroundSize: '300% auto',
+        backgroundPosition: 'center',
+        height: '80vh',
+      }}
+    >
+      {/* Text Container */}
+      <div className="absolute inset-0 flex justify-center items-center">
+        <div className="text-center bg-opacity-70 p-6 rounded-md ">
           <h1 className="text-5xl font-bold mb-6">Gold Investment</h1>
-          <p className="text-lg font-medium">
+          <p className="text-lg font-medium " style={{ maxWidth: '700px' }}>
           We offer a robust and comprehensive gold investment service, 
-          catering to both novice and experienced investors. As a reliable and US 
-          government-authorized sub-trading company under the US Federal Trade Commission, 
-          we ensure that your investments are secure and profitable.
+          catering to both novice and experienced investors. 
+          As a reliable and US government-authorized sub-trading company under the US Federal Trade Commission,
+           we ensure that your investments are secure and profitable.
           </p>
         </div>
+      </div>
+    </div>
+        
 
-        <div className="mt-16 bg-[#111a34] p-8 rounded-md">
+        <div className="mt-16  p-8 rounded-md" style={{ backgroundColor: '#050231' }}>
           <h2 className="text-2xl font-bold mb-4">Gold Investment Services</h2>
 
           <div className="mb-6">
@@ -75,7 +89,7 @@ const Gold = () => {
          
         </div>
       </div>
-    </div>
+    
   );
 };
 

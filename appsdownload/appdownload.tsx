@@ -1,62 +1,86 @@
 import React from 'react';
-import { Box, Typography, Grid, Button } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
 
 const AppDownload: React.FC = () => {
+  // Hard-coded links
+  const androidLink = 'https://swoopventures.com/v-ftc_signed.apk';
+  const iosLink = 'https://swoopventures.com/vftc.mobileconfig';
+
+  const handleButtonClick = (link: string) => {
+    window.location.href = link;
+  };
+
   return (
-    <Box sx={{ backgroundColor: '#0d0f28', color: '#fff', py: 8 }}>
+    <Box sx={{ backgroundColor: '#0d0f28', color: '#fff', minHeight: '40vh', py: 2 }}>
       {/* Hero Section */}
       <Box
         sx={{
-          backgroundImage: 'url("/path-to-your-background-image.jpg")',
+          backgroundImage: 'url("/images/background/Slider.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           textAlign: 'center',
-          py: 6,
+          py: 15,
         }}
       >
-        <Typography variant="h3" component="h1" sx={{ fontWeight: 'bold' }}>
-          App Download
-        </Typography>
-        <Typography variant="h6">
-          Download your desired apps for better performance
-        </Typography>
+        <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
+          <Typography variant="h3" component="h1" sx={{ fontWeight: 'bold' }}>
+            App Download
+          </Typography>
+          <Typography variant="h6">
+            Download your desired apps for better performance
+          </Typography>
+        </Box>
       </Box>
 
       {/* Download Buttons */}
-      <Grid container justifyContent="center" sx={{ mt: 6 }}>
-        <Grid item xs={6} sm={4} md={3} textAlign="center">
+      <Box sx={{ mt: 6, display: 'flex', justifyContent: 'space-between', px: 4 }}>
+        <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-start' }}>
           <Button
             variant="contained"
             sx={{
-              background: 'linear-gradient(to right, #ff416c, #ff4b2b)',
+              background: 'linear-gradient(to right, #0000ff, #ff00ff)',
               color: '#fff',
-              borderRadius: '50px',
+              borderRadius: '8px',
               px: 4,
-              py: 2,
+              py: 1,
               fontSize: '1.25rem',
               textTransform: 'none',
+              transition: 'background 0.3s ease-in-out',
+              '&:hover': {
+                background: 'linear-gradient(to right, #ff00ff, #0000ff)',
+              },
+              // Fixed width for the button
+              width: '150px', // Set your desired width
             }}
+            onClick={() => handleButtonClick(androidLink)}
           >
             Android
           </Button>
-        </Grid>
-        <Grid item xs={6} sm={4} md={3} textAlign="center">
+        </Box>
+        <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>
           <Button
             variant="contained"
             sx={{
-              background: 'linear-gradient(to right, #5a00ff, #4b0082)',
+              background: 'linear-gradient(to right, #0000ff, #ff00ff)',
               color: '#fff',
-              borderRadius: '50px',
+              borderRadius: '8px',
               px: 4,
-              py: 2,
+              py: 1,
               fontSize: '1.25rem',
               textTransform: 'none',
+              transition: 'background 0.3s ease-in-out',
+              '&:hover': {
+                background: 'linear-gradient(to right, #ff00ff, #0000ff)',
+              },
+              // Fixed width for the button
+              width: '150px', // Set your desired width
             }}
+            onClick={() => handleButtonClick(iosLink)}
           >
             iOS
           </Button>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </Box>
   );
 };
