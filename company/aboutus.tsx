@@ -54,7 +54,7 @@ const About = () => {
         {/* Text Container */}
         <div className="absolute inset-0 flex justify-center items-center">
           <div className="text-center bg-opacity-70 p-6 rounded-md ">
-            <h1 className="text-5xl font-bold mb-6">Investment Support</h1>
+            <h1 className="text-5xl font-bold mb-6" style={{ color: '#00B4D8' }}>Investment Support</h1>
             <p className="text-lg font-medium " style={{ maxWidth: '700px' }}>
               We understand that successful investing requires more than just selecting the right assets.
               It involves ongoing support, expert guidance, and access to the right tools and resources.
@@ -71,11 +71,11 @@ const About = () => {
           <div className="flex-1 mb-8 lg:mb-0">
             <img src="/images/layout/home.png" alt="Illustration" className="w-full h-full mr-6 animate-float" />
           </div>
-          <div className="flex-1 lg:pl-15 relative">
-            <h2 className="text-3xl font-medium text-white mb-6">
+          <div className="flex-1 lg:pl-15 relative" style={{ maxWidth: '600px', marginTop: '30px', marginRight: '20px' }}>
+            <h2 className="text-3xl font-bold text-white mb-6" style={{ color: '#db2777' }}>
               What is V-FTC?
             </h2>
-            <p className="text-md text-gray-300 mb-8">
+            <p className="text-md text-gray-300 mb-8" >
               The world first platform to reward investors and traders build on Ventures Federal Trade Commission.
             </p>
             <div className="space-y-8 relative">
@@ -135,7 +135,7 @@ const About = () => {
       {/* Mission and Features Section */}
       <section>
   <div
-    className="flex flex-col md:flex-row justify-between items-start p-8 bg-purple-700 mt-12"
+    className="flex flex-col md:flex-row justify-between items-start p-8 mt-12 py-8 px-4"
     style={{
       backgroundImage: `url(${frameImagePath})`,
       backgroundRepeat: 'no-repeat',
@@ -204,12 +204,12 @@ const About = () => {
 
       <section className="flex justify-center items-center h-[50vh] mt-10" >
         <div className="text-center">
-          <h2 className="text-4xl font-bold mb-12 mt-12">ADVANCED TECHNOLOGY</h2>
+          <h2 className="text-4xl font-bold mb-12 mt-12" style={{ color: '#00B4D8' }}>ADVANCED TECHNOLOGY</h2>
         </div>
       </section>
 
       {/* Advanced Technology and Tools Section */}
-      <section className="w-full text-white py-16 px-0" style={{ backgroundColor: '#130F40' }}>
+      <section className="w-full text-white py-16 px-0 " style={{ backgroundColor: '#130F40' }}>
   <div className="container mx-auto px-8 relative"> {/* Added relative positioning to the container */}
     
     {/* Top Left Image */}
@@ -274,115 +274,126 @@ const About = () => {
 
       <section>
         <div >
-          <h2 className="text-4xl font-bold mb-12 mt-12">Investment Options</h2>
+          <h2 className="text-4xl font-bold mb-12 mt-12" style={{ color: '#00B4D8' }}>Investment Options</h2>
         </div>
       </section>
 
       {/* Investment Options Section */}
       <section
-        className="py-8"
-        style={{
-          backgroundImage: `url(${cardBackgroundImagePath})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          padding: '4rem 0', // Adjust padding as needed
-        }}
-      >
-        <div className="text-center mb-8">
-          <h2 className="text-5xl font-extrabold mb-4">Investment Options</h2> 
-          <h5 className="text-lg font-medium">V-FTC offers a broad spectrum of investment opportunities, including:</h5>
-        </div>
+  className=""
+  style={{
+    backgroundImage: `url(${cardBackgroundImagePath})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    padding: '4rem 0', // Adjust padding as needed
+  }}
+>
+  <div className="text-center mb-8">
+    <h2 className="text-5xl font-extrabold mb-4" style={{ color: '#db2777' }}>Investment Options</h2> 
+    <h5 className="text-lg font-medium">V-FTC offers a broad spectrum of investment opportunities, including:</h5>
+  </div>
 
-        <div className="flex flex-wrap justify-center gap-8 text-white">
-          <Card
-            title="Stocks"
-            content="We provide access to a wide range of stocks, enabling investors to build diversified portfolios and benefit from market growth."
-            iconSrc="/images/icons/icon1.png" // Update with your actual icon path
-            className="text-white"
-          />
-          <Card
-            title="Forex"
-            content="Our forex trading services enable investors to trade major currency pairs, taking advantage of the liquidity and volatility in the foreign exchange market."
-            iconSrc="/images/icons/icon2.png" // Update with your actual icon path
-            className="text-white"
-          />
-          <Card
-            title="Minerals"
-            content="Gold and Other Minerals: In addition to gold, we offer investment opportunities in other valuable minerals such as silver, crude oil, and natural gas, providing a comprehensive suite of options for resource-based investments."
-            iconSrc="/images/icons/icon3.png" // Update with your actual icon path
-            className="text-red"
-          />
-        </div>
-      </section>
+  <div className="flex flex-wrap justify-center gap-8 text-white py-8 px-4">
+    <Card
+      title="Stocks"
+      content="We provide access to a wide range of stocks, enabling investors to build diversified portfolios and benefit from market growth."
+      iconSrc="/images/icons/icon1.png" // Update with your actual icon path
+      className="text-white"
+    />
+    <Card
+      title="Forex"
+      content="Our forex trading services enable investors to trade major currency pairs, taking advantage of the liquidity and volatility in the foreign exchange market."
+      iconSrc="/images/icons/icon2.png" // Update with your actual icon path
+      className="text-white"
+    />
+    <Card
+      title="Minerals"
+      content="Gold and Other Minerals: In addition to gold, we offer investment opportunities in other valuable minerals such as silver, crude oil, and natural gas, providing a comprehensive suite of options for resource-based investments."
+      iconSrc="/images/icons/icon3.png" // Update with your actual icon path
+      className="text-red"
+    />
+  </div>
+</section>
+
 
 
 
       <section>
         <div>
-          <h2 className="text-4xl font-bold mb-12 mt-12">Why Choose Us</h2>
+          <h2 className="text-4xl font-bold mb-12 mt-12" style={{ color: '#00B4D8' }}>Why Choose Us</h2>
         </div>
       </section>
 
 
-      <section className=" py-16" style={{ backgroundColor: '#130F40' }}>
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between">
-        <div className="flex-1 mb-8 lg:mb-0">
-          <img src="/images/background/ab-video.jpg" alt="Illustration" className="w-full h-full mr-6" />
+      <section className="py-16" style={{ backgroundColor: '#130F40', position: 'relative' }}>
+  <div className="flex flex-col lg:flex-row items-start w-full">
+    <div className="flex-1" style={{ maxWidth: '500px', position: 'relative', top: '40px', left: '20px' }}>
+      <div className="relative">
+        <img src="/images/background/ab-video.jpg" alt="Illustration" className="w-full h-auto" />
+        <button
+          onClick={() => window.open('https://www.youtube.com/watch?v=YOUR_VIDEO_ID', '_blank')}
+          className="absolute inset-0 flex items-center justify-center"
+          style={{ background: 'white', borderRadius: '50%', width: '80px', height: '80px' }}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-16 h-16 text-blue-500">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-4.505 2.597A1 1 0 019 12.82V9.182a1 1 0 011.247-.968l4.505 2.597a1 1 0 010 1.737z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div className="flex-1 lg:pl-15 relative" style={{ maxWidth: '50%', marginTop: '30px', marginRight: '20px', marginLeft: '320px' }}>
+      <h5 className="text-blue-400 text-bold" style={{ color: 'cyan' }}>ABOUT US</h5>
+      <h2 className="text-4xl font-bold text-white mb-6" style={{ color: '#db2777' }}>Why choose V-FTC?</h2>
+      <div className="space-y-8 relative">
+        {/* Content sections */}
+        <div className="flex items-start">
+          <div className="flex-shrink-0">
+            <div className="bg-gradient-to-r from-blue-500 to-pink-500 rounded-full h-12 w-12 flex justify-center items-center">
+              <Link href="/">
+                <FaUsers size={20} color="white" />
+              </Link>
+            </div>
+          </div>
+          <div className="ml-4">
+            <h3 className="text-xl font-bold text-white">Diverse Investment Opportunities</h3>
+            <p className="mt-2 text-base text-gray-300">
+              At Ventures Federal Trading Commission (V-FTC), we offer a comprehensive range of investment options,
+              including stocks, digital currencies, forex, gold, and other valuable minerals such as silver,
+              crude oil, and natural gas. Whether you're interested in short-term trading for quick gains or 
+              long-term strategies for sustained growth, our platform is designed to meet your diverse financial needs.
+            </p>
+          </div>
         </div>
-        <div className="flex-1 lg:pl-15 relative">
-          <h5 className="text-blue-400 text-bold" style={{color: 'blue' }}>ABOUT US</h5>
-          <h2 className="text-4xl font-bold text-white mb-6">
-          Why choose V-FTC?
-          </h2>
-          <div className="space-y-8 relative">
-            {/* Vertical dotted line */}
-            <div className="flex items-start">
-              <div className="flex-shrink-0">
-                <div className="bg-gradient-to-r from-blue-500 to-pink-500 rounded-full h-12 w-12 flex justify-center items-center">
-                  <Link href="/">
-                    <FaUsers size={20} color="white" />
-                  </Link>
-                </div>
-              </div>
-              <div className="ml-4">
-                <h3 className="text-xl font-semibold text-white">Diverse Investment Opportunities</h3>
-                <p className="mt-2 text-base text-gray-300">
-                At Ventures Federal Trading Commission (V-FTC), we offer a comprehensive range of investment options,
-                 including stocks, digital currencies, forex, gold, and other valuable minerals such as silver,
-                  crude oil, and natural gas. Whether you're interested in short-term trading for quick gains or 
-                  long-term strategies for sustained growth, our platform is designed to meet your diverse financial
-                   needs.                
-                   </p>
-              </div>
+        <div className="flex items-start">
+          <div className="flex-shrink-0">
+            <div className="bg-gradient-to-r from-blue-500 to-pink-500 rounded-full h-12 w-12 flex justify-center items-center">
+              <Link href="/">
+                <FaGlobe size={20} color="white" />
+              </Link>
             </div>
-            <div className="flex items-start">
-              <div className="flex-shrink-0">
-                <div className="bg-gradient-to-r from-blue-500 to-pink-500 rounded-full h-12 w-12 flex justify-center items-center">
-                  <Link href="/">
-                    <FaGlobe size={20} color="white" />
-                  </Link>
-                </div>
-              </div>
-              <div className="ml-4">
-                <h3 className="text-xl font-semibold text-white">Trusted and Authorized</h3>
-                <p className="mt-2 text-base text-gray-300">
-                V-FTC is a US government-authorized sub-trading company under the US Federal Trade Commission,
-                 ensuring our operations meet the highest regulatory standards. Established on May 10, 2018, 
-                 we quickly gained the trust of our clients, reaching 10,000 users within our first year. 
-                 This rapid growth underscores our commitment to reliability, transparency, and security in all
-                  our investment services.                
-                  </p>
-              </div>
-            </div>
-            
+          </div>
+          <div className="ml-4">
+            <h3 className="text-xl font-bold text-white">Trusted and Authorized</h3>
+            <p className="mt-2 text-base text-gray-300">
+              V-FTC is a US government-authorized sub-trading company under the US Federal Trade Commission,
+              ensuring our operations meet the highest regulatory standards. Established on May 10, 2018, 
+              we quickly gained the trust of our clients, reaching 10,000 users within our first year. 
+              This rapid growth underscores our commitment to reliability, transparency, and security in all
+              our investment services.
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+
+
 
     <section>
         <div>
-          <h2 className="text-4xl font-bold mb-12 mt-12">Investment Opportunities</h2>
+          <h2 className="text-4xl font-bold mb-12 mt-12" style={{ color: '#00B4D8' }}>Investment Opportunities</h2>
         </div>
       </section>
 
@@ -391,58 +402,57 @@ const About = () => {
 
       <section>
         <div>
-          <h2 className="text-4xl font-bold mb-12 mt-12">What is V-FTC</h2>
+          <h2 className="text-4xl font-bold mb-12 mt-12" style={{ color: '#00B4D8' }}>What is V-FTC</h2>
         </div>
       </section>
 
 
 {/*what is VFTC section main*/}
 
-      <section
-        className="py-8"
-        style={{ 
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          padding: '4rem 0', // Adjust padding as needed
-          backgroundColor: '#130F40',
-        }}
-      >
-        <div className="text-start mb-8">
-          <h2 className="text-5xl font-bold mb-4"style={{ color: '#7CFC00' }}>What is V-FTC?</h2> 
-          <h5 className="text-lg font-medium">V-FTC is a US government-authorized sub-trading company under the US Federal Trade Commission, ensuring our operations meet the<br />
-             highest regulatory standards.</h5>
-        </div>
+<section
+  className="py-8 px-4"  // Add padding-left and padding-right
+  style={{
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    padding: '4rem 2rem', // Adjust padding as needed
+    backgroundColor: '#130F40',
+  }}
+>
+  <div className="text-start mb-8">
+    <h2 className="text-5xl font-bold mb-4" style={{ color: '#7CFC00' }}>What is V-FTC?</h2> 
+    <h5 className="text-lg font-medium">
+      V-FTC is a US government-authorized sub-trading company under the US Federal Trade Commission, ensuring our operations meet the<br />
+      highest regulatory standards.
+    </h5>
+  </div>
 
-        <div className="flex flex-wrap justify-start text-start gap-8 text-white">
-          <Card
-        
-            title="What Is V-FTC"
-            content="Ventures Federal Trading Commission (V-FTC) is an investment company established on May 10, 2018.
-             As a US government-authorized sub-trading company under the US Federal Trade Commission, 
-             V-FTC quickly grew to reach 10,000 users within its first year,
-              demonstrating its reliability and trustworthiness in the investment industry."
-              className="text-white"
-           
-          />
-          <Card
-            title="Diverse Investment Portfolio"
-            content="V-FTC offers a wide array of investment opportunities, including stocks, digital currencies, 
-            forex, gold, and other valuable minerals like silver, crude oil, and natural gas. 
-            Our platform supports both short-term and long-term trading strategies, catering to various investment goals and preferences."
-            className="text-white"
-            
-          />
-          <Card
-            title="Expertise in Trading and Mining"
-            content="In addition to traditional investment options, 
-            V-FTC excels in mining operations for valuable minerals and digital currencies. 
-            Leveraging advanced technology and robust security measures, we provide a secure and efficient investment environment,
-             ensuring our clients have the tools and support needed to succeed."
-             className="text-white"
-           
-          />
-        </div>
-      </section>
+  <div className="flex flex-wrap justify-start text-start gap-8 text-white">
+    <Card
+      title="What Is V-FTC"
+      content="Ventures Federal Trading Commission (V-FTC) is an investment company established on May 10, 2018.
+      As a US government-authorized sub-trading company under the US Federal Trade Commission, 
+      V-FTC quickly grew to reach 10,000 users within its first year,
+      demonstrating its reliability and trustworthiness in the investment industry."
+      className="text-white"
+    />
+    <Card
+      title="Diverse Investment Portfolio"
+      content="V-FTC offers a wide array of investment opportunities, including stocks, digital currencies, 
+      forex, gold, and other valuable minerals like silver, crude oil, and natural gas. 
+      Our platform supports both short-term and long-term trading strategies, catering to various investment goals and preferences."
+      className="text-white"
+    />
+    <Card
+      title="Expertise in Trading and Mining"
+      content="In addition to traditional investment options, 
+      V-FTC excels in mining operations for valuable minerals and digital currencies. 
+      Leveraging advanced technology and robust security measures, we provide a secure and efficient investment environment,
+      ensuring our clients have the tools and support needed to succeed."
+      className="text-white"
+    />
+  </div>
+</section>
+
 
 
 
@@ -454,7 +464,7 @@ const About = () => {
 
       <section>
         <div>
-          <h2 className="text-4xl font-bold mb-12 mt-12">Business Deal</h2>
+          <h2 className="text-4xl font-bold mb-12 mt-12" style={{ color: '#00B4D8' }}>Business Deal</h2>
         </div>
       </section>
 
@@ -466,107 +476,103 @@ const About = () => {
 
 
       <section
-        className="py-8"
-        style={{
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          padding: '4rem 0', // Adjust padding as needed
-          backgroundColor: '#130F40',
-        }}
-      >
-        <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold mb-4">Business Deal With V-FTC?</h2> 
-        </div>
+  className="py-8 px-6"
+  style={{
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundColor: '#130F40',
+  }}
+>
+  <div className="text-center mb-8">
+    <h2 className="text-4xl font-bold mb-4" style={{ color: '#db2777' }}>
+      Business Deal With V-FTC?
+    </h2>
+  </div>
 
-        <div className="flex flex-wrap justify-center gap-8 text-white">
-          <Card
-            title="digital currency Trading"
-            content="V-FTC helps customers to deal with digital currency short and long term trade for standard profit margin"
-            iconSrc="/images/icons/icon1.png" // Update with your actual icon path
-            className="text-white"
-          />
-          <Card
-            title="digital currency Mining"
-            content="The platform helps investors to make easy to purchase and invest that in mining sector"
-            iconSrc="/images/icons/icon2.png" // Update with your actual icon path
-            className="text-white"
-          />
-          <Card
-            title="Minerals trading"
-            content="V-FTC has most popular Minerals trading like Gold, Silver, Crude Oil, Natural Gas"
-            iconSrc="/images/icons/icon3.png" // Update with your actual icon path
-            className="text-white"
-          />
-        </div>
-      </section>
+  <div className="flex flex-wrap justify-center gap-8 text-white">
+    <Card
+      title="Digital Currency Trading"
+      content="V-FTC helps customers to deal with digital currency short and long term trade for standard profit margin"
+      iconSrc="/images/icons/icon1.png"
+      className="text-white"
+    />
+    <Card
+      title="Digital Currency Mining"
+      content="The platform helps investors to make it easy to purchase and invest in the mining sector"
+      iconSrc="/images/icons/icon2.png"
+      className="text-white"
+    />
+    <Card
+      title="Minerals Trading"
+      content="V-FTC has most popular Minerals trading like Gold, Silver, Crude Oil, Natural Gas"
+      iconSrc="/images/icons/icon3.png"
+      className="text-white"
+    />
+  </div>
+</section>
 
+<section
+  className="py-8 px-6"
+  style={{
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundColor: '#130F40',
+  }}
+>
+  <div className="flex flex-wrap justify-center gap-8 text-white">
+    <Card
+      title="Minerals Mining"
+      content="The process of taking into account the collective opinion of a group."
+      iconSrc="/images/icons/icon1.png"
+      className="text-white"
+    />
+    <Card
+      title="Stocks Investment"
+      content="We have the most popular Stocks investment like Tesla, Apple, Amazon, Google, Meta. The system pays a bonus for excellent individuals conveniently."
+      iconSrc="/images/icons/icon2.png"
+      className="text-white"
+    />
+    <Card
+      title="Forex Trading"
+      content="We provide our investors with safe and secure Forex trading with market analyst guidance."
+      iconSrc="/images/icons/icon3.png"
+      className="text-white"
+    />
+  </div>
+</section>
 
-      
-      <section
-        className="py-8"
-        style={{
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          padding: '4rem 0', // Adjust padding as needed
-          backgroundColor: '#130F40',
-        }}
-      >
-         <div className="flex flex-wrap justify-center gap-8 text-white">
-          <Card
-            title="Minerals Mining"
-            content="The process of taking into account the collective opinion of a group."
-            iconSrc="/images/icons/icon1.png" // Update with your actual icon path
-            className="text-white"
-          />
-          <Card
-            title="Stocks Investment"
-            content="We have most popular Stocks investment like Tesla, Apple, Amazon, Google, Meta. The system pay a bonus for excillent individuals conveniently."
-            iconSrc="/images/icons/icon2.png" // Update with your actual icon path
-            className="text-white"
-          />
-          <Card
-            title="Forex Trading"
-            content="We provide our investors with safe and secure Forex trading with market analyst guidance."
-            iconSrc="/images/icons/icon3.png" // Update with your actual icon path
-            className="text-white"
-          />
-        </div>
-
-       
-        </section>
 
 
         <section>
         <div>
-          <h2 className="text-4xl font-bold mb-12 mt-12">V-FTC Introduction</h2>
+          <h2 className="text-4xl font-bold mb-12 mt-12" style={{ color: '#00B4D8' }}>V-FTC Introduction</h2>
         </div>
       </section>
 
-      <section className="py-12" style={{ backgroundColor: '#130F40', width: '100%' }}>
+      <section className="py-12 px-4" style={{ backgroundColor: '#130F40', width: '100%' }}>
   <div className="flex flex-col lg:flex-row items-center justify-between">
-    <div className="flex-1 mb-8 lg:mb-0">
+    <div className="flex-1 mb-8 lg:mb-0 relative">
       <h2 className="text-5xl font-bold mb-6 mt-4">Allow us to Introduce Ourselves</h2>
-      <p>
+      <p className="text-2xl">
         V-FTC (Ventures Federal Trading Commission) is an investment company, that was built on May 10, 2018. 
         V-FTC reached 10,000 users within one year. This is a US government-authorized sub-trading company of 
         the US Federal Trade Commission.
       </p>
-      <div>
+      <div className="relative flex items-center">
         <a href="/images/layout/item-01.jpg">
           <img src="/images/layout/item-01.jpg" alt="" />
         </a>
-        <a href="/public/images/logos/logo-main.png">
-          <img src="/public/images/logos/logo-main.png" alt="" />
+        <a href="/images/logos/logo-main.png" className="relative top-0 left-0 transform translate-x-1/2 justify-center">
+          <img src="/images/logos/logo-main.png" alt="" className="w-16 h-12" />
         </a>
       </div>
     </div>
     <div className="flex-1 lg:pl-15 relative">
       <div className="space-y-8 relative">
-        {/* Vertical dotted line */}
         <div className="flex items-start">
           <div className="flex-shrink-0">
-            <div className="border-4 border-purple-600 rounded-lg h-16 w-16 flex justify-center items-center text-bold">
-              <h6 className="text-bold font-bold text-5xl">01</h6>
+            <div className="border-4 border-pink-600 rounded-lg h-16 w-16 flex justify-center items-center text-bold">
+              <h6 className="text-bold font-bold text-5xl" style={{ color: '#db2777' }}>01</h6>
             </div>
           </div>
           <div className="ml-4">
@@ -577,8 +583,8 @@ const About = () => {
         
         <div className="flex items-start">
           <div className="flex-shrink-0">
-            <div className="border-4 border-purple-600 rounded-lg h-16 w-16 flex justify-center items-center">
-              <h6 className="text-bold font-bold text-5xl">02</h6>
+            <div className="border-4 border-pink-600 rounded-lg h-16 w-16 flex justify-center items-center">
+              <h6 className="text-bold font-bold text-5xl" style={{ color: '#db2777' }}>02</h6>
             </div>
           </div>
           <div className="ml-4">
@@ -589,8 +595,8 @@ const About = () => {
         
         <div className="flex items-start">
           <div className="flex-shrink-0">
-            <div className="border-4 border-purple-600 rounded-lg h-16 w-16 flex justify-center items-center">
-              <h6 className="text-bold font-bold text-5xl">03</h6>
+            <div className="border-4 border-pink-600 rounded-lg h-16 w-16 flex justify-center items-center">
+              <h6 className="text-bold font-bold text-5xl" style={{ color: '#db2777' }}>03</h6>
             </div>
           </div>
           <div className="ml-4">
@@ -601,8 +607,8 @@ const About = () => {
         
         <div className="flex items-start">
           <div className="flex-shrink-0">
-            <div className="border-4 border-purple-600 rounded-lg h-16 w-16 flex justify-center items-center">
-              <h6 className="text-bold font-bold text-5xl">04</h6>
+            <div className="border-8 border-pink-600 rounded-lg flex justify-center items-center font-bold h-16 w-16 text-5xl">
+              <h6 className="text-bold" style={{ color: '#db2777' }}>04</h6>
             </div>
           </div>
           <div className="ml-4">
@@ -614,6 +620,10 @@ const About = () => {
     </div>
   </div>
 </section>
+
+
+
+
 
 
 
