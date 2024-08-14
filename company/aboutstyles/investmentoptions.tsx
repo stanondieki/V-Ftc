@@ -33,10 +33,10 @@ const InvestPage = () => {
 const cardBackgroundImagePath = '/images/background/platform-bg.jpg'; // Update with your actual image path
 
     return (
-        <div>
+        <div style={{ backgroundColor: '#050231' }}>
             <section>
                 <div >
-                    <h2 className="text-4xl font-bold mb-12 mt-12" style={{ color: '#00B4D8' }}>Investment Options</h2>
+                    <h2 className="text-4xl font-bold mb-12 mt-12 items-center flex justify-center" style={{ color: '#00B4D8' }}>Investment Options</h2>
                 </div>
             </section>
             <section
@@ -49,7 +49,7 @@ const cardBackgroundImagePath = '/images/background/platform-bg.jpg'; // Update 
                 }}
                 >
                 <div className="text-center mb-8">
-                <h2 className="text-5xl font-extrabold mb-4" style={{ color: '#db2777' }}>Investment Options</h2> 
+                <h2 className="text-5xl font-extrabold mb-4 items-center flex justify-center" style={{ color: '#db2777' }}>Investment Options</h2> 
                 <h5 className="text-lg font-medium">V-FTC offers a broad spectrum of investment opportunities, including:</h5>
                 </div>
             

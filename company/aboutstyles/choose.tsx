@@ -4,10 +4,10 @@ import { FaGlobe, FaShield, FaUsers } from 'react-icons/fa6';
 
 const ChoosePage = () => {
     return(
-        <div>
-            <section>
+        <div style={{ backgroundColor: '#050231' }}>
+            <section >
                 <div>
-                    <h2 className="text-4xl font-bold mb-12 mt-12" style={{ color: '#00B4D8' }}>Why Choose Us</h2>
+                    <h2 className="text-4xl font-bold mb-12 mt-12 items-center flex justify-center" style={{ color: '#00B4D8' }}>Why Choose Us</h2>
                 </div>
             </section>
             <section className="py-16" style={{ backgroundColor: '#130F40', position: 'relative' }}>
