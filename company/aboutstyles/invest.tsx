@@ -19,6 +19,7 @@ const InvestmentOpportunities = () => {
     display: 'flex',
     justifyContent: 'space-between',
     position: 'relative',
+    overflow: 'hidden', // Hide images when they slide out of view
   };
 
   const columnStyle: React.CSSProperties = {
@@ -27,39 +28,50 @@ const InvestmentOpportunities = () => {
     alignItems: 'center',
     position: 'relative',
     gap: '20px',
-    overflow: 'hidden', // Ensure images stay within their column
+    overflow: 'visible',
   };
 
   const imageStyle: React.CSSProperties = {
-    width: '200px', // Increased image size
+    width: '250px', // Reduce size to match static images
     height: 'auto',
-    transform: 'rotate(-30deg)', // Reduced tilt degree
+    transform: 'rotate(-30deg)',
     position: 'relative',
     zIndex: 1,
+    borderRadius: '20px',
   };
 
   const staticImageStyle: React.CSSProperties = {
     ...imageStyle,
-    animation: 'none', // No animation for the static image
+    left: '-3px', // Moved to the left by increasing negative value
+    animation: 'none',
+  };
+
+  const image2Style: React.CSSProperties = {
+    ...staticImageStyle,
+    left: '160px', // Keep this one at the same position
   };
 
   const slidingImageStyle: React.CSSProperties = {
     ...imageStyle,
-    animation: 'slide 10s linear infinite', // Add sliding animation
+    animation: 'slide-upwards 20s linear infinite',
   };
 
-  // Function to apply custom staggering with overlap, spacing, and independent right shift
-  const staggeredImageStyle = (index: number, rightShift: number = 0): React.CSSProperties => {
-    const topOffset = index * 10; // Customize the vertical offset
-    const leftOffset = index * 20 + rightShift; // Customize the horizontal offset for overlap + independent right shift
-    const zIndex = 10 - index; // Higher zIndex for earlier images to overlap later images
+  const slidingImageStyleDownwards: React.CSSProperties = {
+    ...imageStyle,
+    animation: 'slide-downwards 20s linear infinite',
+  };
+
+  const staggeredImageStyle = (index: number, rightShift: number = 0, isUpwards: boolean = true): React.CSSProperties => {
+    const topOffset = index * 10;
+    const leftOffset = index * 20 + rightShift;
+    const zIndex = 10 - index;
 
     return {
-      ...slidingImageStyle,
+      ...(isUpwards ? slidingImageStyle : slidingImageStyleDownwards),
       top: `${topOffset}px`,
       left: `${leftOffset}px`,
       zIndex,
-      marginBottom: '-20px', // Reduced overlap for better spacing
+      marginBottom: '-20px',
     };
   };
 
@@ -73,31 +85,45 @@ const InvestmentOpportunities = () => {
       </div>
       <div style={rightSectionStyle}>
         <div style={columnStyle}>
-          {/* Static image */}
+          {/* Static images */}
           <img src="/images/item/item-banner-1.png" alt="Image 1" style={staticImageStyle} />
-          <img src="/images/item/item-banner-1.png" alt="Image 2" style={staticImageStyle} />
+          <img src="/images/item/item-banner-1.png" alt="Image 2" style={image2Style} />
         </div>
         <div style={columnStyle}>
-          {/* Sliding images */}
-          <img src="/images/item/item-banner-3.png" alt="Image 3" style={staggeredImageStyle(0, 45)} />
-          <img src="/images/item/item-banner-7.png" alt="Image 4" style={staggeredImageStyle(1, 150)} />
-          <img src="/images/item/item-banner-5.png" alt="Image 5" style={staggeredImageStyle(2, 255)} />
-          <img src="/images/item/item-banner-6.png" alt="Image 6" style={staggeredImageStyle(3, 360)} />
+          {/* Sliding images upwards */}
+          <img src="/images/item/item-banner-3.png" alt="Image 3" style={staggeredImageStyle(0, 20, true)} />
+          <img src="/images/item/item-banner-7.png" alt="Image 4" style={staggeredImageStyle(1, 150, true)} />
+          <img src="/images/item/item-banner-5.png" alt="Image 5" style={staggeredImageStyle(2, 280, true)} />
         </div>
         <div style={columnStyle}>
-          <img src="/images/item/item-banner-5.png" alt="Image 8" style={staggeredImageStyle(4, -123)} />
-          <img src="/images/item/item-banner-3.png" alt="Image 9" style={staggeredImageStyle(5, -70)} />
-          <img src="/images/item/item-banner-6.png" alt="Image 10" style={staggeredImageStyle(6, -110)} />
+          {/* Sliding images downwards */}
+          <img src="/images/item/item-banner-5.png" alt="Image 8" style={staggeredImageStyle(4, -80, false)} />
+          <img src="/images/item/item-banner-3.png" alt="Image 9" style={staggeredImageStyle(5, 40, false)} />
         </div>
       </div>
       <style>
         {`
-          @keyframes slide {
+          @keyframes slide-upwards {
             0% {
               transform: translateX(0) translateY(0) rotate(-30deg);
             }
-            100% {
+            50% {
               transform: translateX(-100px) translateY(-100px) rotate(-30deg);
+            }
+            100% {
+              transform: translateX(0) translateY(0) rotate(-30deg);
+            }
+          }
+
+          @keyframes slide-downwards {
+            0% {
+              transform: translateX(0) translateY(0) rotate(-30deg);
+            }
+            50% {
+              transform: translateX(100px) translateY(100px) rotate(-30deg);
+            }
+            100% {
+              transform: translateX(0) translateY(0) rotate(-30deg);
             }
           }
         `}
