@@ -14,12 +14,13 @@ const Insupport = () => {
         {/* Text Container */}
         <div className="absolute inset-0 flex justify-center items-center">
           <div className="text-center bg-opacity-70 p-6 rounded-md ">
-            <h1 className="text-5xl font-bold mb-6" style={{ color: '#00B4D8' }}>Investment Support</h1>
+            <h1 className="text-5xl font-bold mb-6" style={{ color: '#00B4D8' }}>About Us</h1>
             <p className="text-lg font-medium " style={{ maxWidth: '700px' }}>
-              We understand that successful investing requires more than just selecting the right assets.
-              It involves ongoing support, expert guidance, and access to the right tools and resources.
-              Our comprehensive investment support services are designed to provide you with the assistance
-              you need to navigate the complexities of the financial markets and achieve your investment objectives.
+            Ventures Federal Trading Commission (V-FTC) is a leading investment company established 
+            on May 10, 2018. Authorized by the US Federal Trade Commission, we are a trusted sub-trading 
+            company committed to delivering exceptional investment services. In just one year, we achieved 
+            the remarkable milestone of reaching 10,000 users, reflecting the trust and satisfaction of our 
+            growing client base.
             </p>
           </div>
         </div>
