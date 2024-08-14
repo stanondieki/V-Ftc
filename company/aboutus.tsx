@@ -1,5 +1,4 @@
 import InvestmentOpportunities from '@/company/aboutstyles/invest';
-import InfoSection from '@/components/infosection';
 import Insupport from './aboutstyles/investsupport';
 import Missions from './aboutstyles/mission';
 import AdvancedPage from './aboutstyles/advanced';
@@ -9,13 +8,14 @@ import VftcPage from './aboutstyles/vftc';
 import DealsPage from './aboutstyles/deals';
 import MineralPage from './aboutstyles/minerals';
 import IntroPage from './aboutstyles/introduction';
+import WhatPage from './aboutstyles/whatvftc';
 
 
 const About = () => {
   return (
     <div className=" min-h-screen flex flex-col justify-center items-center text-white">
       <Insupport/>
-      <InfoSection/>
+      <WhatPage/>
       <Missions/>
       <AdvancedPage/>
       <InvestPage/>
