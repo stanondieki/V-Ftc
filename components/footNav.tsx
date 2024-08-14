@@ -60,22 +60,22 @@ const footerLinks = [
   {
     title: 'Company',
     links: [
-      { label: 'About US', href: '/about' },
-      { label: 'Contact US', href: '/contact' },
+      { label: 'About US', href: '/About' },
+      { label: 'Contact US', href: '/Contact' },
     ],
   },
   {
     title: 'Useful Links',
     links: [
-      { label: 'Our Services', href: '/services' },
-      { label: 'FAQs', href: '/faqs' },
+      { label: 'Our Services', href: '/About' },
+      { label: 'FAQs', href: '/About' },
     ],
   },
   {
     title: 'Privacy',
     links: [
-      { label: 'Privacy Policy', href: '/privacy-policy' },
-      { label: 'Terms & Conditions', href: '/terms' },
+      { label: 'Privacy Policy', href: '/Privacy' },
+      { label: 'Terms & Conditions', href: '/Privacy' },
     ],
   },
 ];
