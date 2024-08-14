@@ -1,63 +1,91 @@
 import React from 'react';
 
-const InvestmentOpportunities: React.FC = () => {
+const InvestmentOpportunities = () => {
+  const containerStyle: React.CSSProperties = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '20px',
+    backgroundColor: '#300D6B',
+  };
+
+  const leftSectionStyle: React.CSSProperties = {
+    flex: 1,
+    paddingRight: '20px',
+    color: '#fff',
+  };
+
+  const rightSectionStyle: React.CSSProperties = {
+    flex: 2,
+    display: 'flex',
+    justifyContent: 'space-between',
+    position: 'relative',
+  };
+
+  const columnStyle: React.CSSProperties = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    position: 'relative',
+    gap: '20px',
+  };
+
+  const imageStyle: React.CSSProperties = {
+    width: '150px',
+    height: 'auto',
+    transform: 'rotate(-45deg)',
+    position: 'relative',
+    zIndex: 1,
+  };
+
+  const overlappingImageStyle: React.CSSProperties = {
+    ...imageStyle,
+    zIndex: 2,
+  };
+
+  // Function to apply custom staggering with overlap and spacing
+  const staggeredImageStyle = (index: number): React.CSSProperties => {
+    const topOffset = index * 10; // Customize the vertical offset
+    const leftOffset = index * 20; // Customize the horizontal offset for overlap
+    const zIndex = 10 - index; // Higher zIndex for earlier images to overlap later images
+
+    return {
+      ...overlappingImageStyle,
+      top: `${topOffset}px`,
+      left: `${leftOffset}px`,
+      zIndex,
+      marginBottom: '-40px', // Reduced overlap for better spacing
+    };
+  };
+
   return (
-    <section className="text-white py-12" style={{ backgroundColor: '#050231' }}>
-      <div className="text-center">
-        <h2 className="text-4xl font-bold mb-8 items-center flex justify-center">Investment Opportunities</h2>
+    <div style={containerStyle}>
+      <div style={leftSectionStyle}>
+        <h1 className="text-5xl font-bold mb-6">Investment Opportunities at V-FTC</h1>
+        <p className="text-2xl font-semibold mb-6">
+          At V-FTC, we offer a diverse range of investment opportunities to cater to the varied needs of our clients. Our platform provides access to stocks, digital currencies, forex, gold, and other valuable minerals like silver, crude oil, and natural gas. We specialize in both short-term and long-term trading strategies, enabling investors to capitalize on market fluctuations for quick gains or to build sustained growth over time. Additionally, our mining operations in valuable minerals and digital currencies further enhance our portfolio, ensuring a comprehensive and profitable investment experience for all our users.
+        </p>
       </div>
-      <div className="flex flex-col lg:flex-row lg:justify-between">
-        <div className="lg:w-1/2 mb-8 lg:mb-0">
-          <h3 className="text-3xl font-bold mb-4">Investment Opportunities At V-FTC</h3>
-          <p className="text-lg leading-relaxed mb-6">
-            At V-FTC, we offer a diverse range of investment opportunities to cater to the varied needs of our clients. 
-            Our platform provides access to stocks, digital currencies, forex, gold, and other valuable minerals like silver, 
-            crude oil, and natural gas. We specialize in both short-term and long-term trading strategies, enabling investors 
-            to capitalize on market fluctuations for quick gains or to build sustained growth over time. Additionally, our mining 
-            operations in valuable minerals and digital currencies further enhance our portfolio, ensuring a comprehensive and 
-            profitable investment experience for all our users.
-          </p>
-          <a href="#" className="inline-block bg-purple-700 text-white text-sm font-semibold uppercase px-6 py-3 rounded-md hover:bg-purple-800">
-            SEE Latest Events
-          </a>
+      <div style={rightSectionStyle}>
+        <div style={columnStyle}>
+          <img src="/images/item/item-banner-1.png" alt="Image 1" style={imageStyle} />
+          <img src="/images/item/item-banner-2.png" alt="Image 2" style={staggeredImageStyle(1)} />
         </div>
-        <div className="lg:w-1/2 grid grid-cols-2 gap-4">
-          {/* Column 1 */}
-          <div className="flex flex-col gap-4">
-            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
-              <img src="/images/item/item-banner-1.png" alt="Mining" className="h-20 object-contain" />
-            </div>
-            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
-              <img src="/images/item/item-banner-1.png" alt="Trading" className="h-20 object-contain" />
-            </div>
-          </div>
-          {/* Column 2 */}
-          <div className="flex flex-col gap-4">
-            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
-              <img src="/images/item/item-banner-6.png" alt="Mining" className="h-20 object-contain" />
-            </div>
-            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
-              <img src="/images/item/item-banner-7.png" alt="Biogas" className="h-20 object-contain" />
-            </div>
-            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
-              <img src="/images/item/item-banner-3.png" alt="Gold" className="h-20 object-contain" />
-            </div>
-            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
-              <img src="/images/item/item-banner-5.png" alt="Trading" className="h-20 object-contain" />
-            </div>
-            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
-              <img src="/images/item/item-banner-3.png" alt="New Image 1" className="h-20 object-contain" />
-            </div>
-            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
-              <img src="/images/item/item-banner-6.png" alt="New Image 2" className="h-20 object-contain" />
-            </div>
-            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
-              <img src="/images/item/item-banner-5.png" alt="New Image 3" className="h-20 object-contain" />
-            </div>
-          </div>
+        <div style={columnStyle}>
+          <img src="/images/item/item-banner-3.png" alt="Image 3" style={imageStyle} />
+          <img src="/images/item/item-banner-4.png" alt="Image 4" style={staggeredImageStyle(2)} />
+          <img src="/images/item/item-banner-5.png" alt="Image 5" style={imageStyle} />
+          <img src="/images/item/item-banner-6.png" alt="Image 6" style={staggeredImageStyle(3)} />
+          <img src="/images/item/item-banner-7.png" alt="Image 7" style={imageStyle} />
+        </div>
+        <div style={columnStyle}>
+          <img src="/images/item/item-banner-8.png" alt="Image 8" style={staggeredImageStyle(4)} />
+          <img src="/images/item/item-banner-9.png" alt="Image 9" style={imageStyle} />
+          <img src="/images/item/item-banner-10.png" alt="Image 10" style={staggeredImageStyle(5)} />
+          <img src="/images/item/item-banner-11.png" alt="Image 11" style={imageStyle} />
+          <img src="/images/item/item-banner-12.png" alt="Image 12" style={staggeredImageStyle(6)} />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
