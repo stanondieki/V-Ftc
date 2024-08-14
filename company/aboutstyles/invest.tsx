@@ -27,7 +27,7 @@ const InvestmentOpportunities = () => {
     alignItems: 'center',
     position: 'relative',
     gap: '20px',
-    overflow: 'hidden', // Ensure images stay within their column
+    overflow: 'visible', // Ensure images stay within their column
   };
 
   const imageStyle: React.CSSProperties = {
@@ -36,6 +36,7 @@ const InvestmentOpportunities = () => {
     transform: 'rotate(-30deg)', // Reduced tilt degree
     position: 'relative',
     zIndex: 1,
+    borderRadius: '20px', // Apply rounded corners
   };
 
   const staticImageStyle: React.CSSProperties = {
@@ -43,12 +44,17 @@ const InvestmentOpportunities = () => {
     animation: 'none', // No animation for the static image
   };
 
+  // Specific style for Image 2 to move it to the right
+  const image2Style: React.CSSProperties = {
+    ...staticImageStyle,
+    left: '130px', // Adjust this value to move Image 2 to the right
+  };
+
   const slidingImageStyle: React.CSSProperties = {
     ...imageStyle,
     animation: 'slide 10s linear infinite', // Add sliding animation
   };
 
-  // Function to apply custom staggering with overlap, spacing, and independent right shift
   const staggeredImageStyle = (index: number, rightShift: number = 0): React.CSSProperties => {
     const topOffset = index * 10; // Customize the vertical offset
     const leftOffset = index * 20 + rightShift; // Customize the horizontal offset for overlap + independent right shift
@@ -73,9 +79,10 @@ const InvestmentOpportunities = () => {
       </div>
       <div style={rightSectionStyle}>
         <div style={columnStyle}>
-          {/* Static image */}
+          {/* Static image 1 */}
           <img src="/images/item/item-banner-1.png" alt="Image 1" style={staticImageStyle} />
-          <img src="/images/item/item-banner-1.png" alt="Image 2" style={staticImageStyle} />
+          {/* Static image 2 with adjusted position */}
+          <img src="/images/item/item-banner-1.png" alt="Image 2" style={image2Style} />
         </div>
         <div style={columnStyle}>
           {/* Sliding images */}
@@ -85,9 +92,9 @@ const InvestmentOpportunities = () => {
           <img src="/images/item/item-banner-6.png" alt="Image 6" style={staggeredImageStyle(3, 360)} />
         </div>
         <div style={columnStyle}>
-          <img src="/images/item/item-banner-5.png" alt="Image 8" style={staggeredImageStyle(4, -123)} />
-          <img src="/images/item/item-banner-3.png" alt="Image 9" style={staggeredImageStyle(5, -70)} />
-          <img src="/images/item/item-banner-6.png" alt="Image 10" style={staggeredImageStyle(6, -110)} />
+          <img src="/images/item/item-banner-5.png" alt="Image 8" style={staggeredImageStyle(4, -110)} />
+          <img src="/images/item/item-banner-3.png" alt="Image 9" style={staggeredImageStyle(5, -5)} />
+          <img src="/images/item/item-banner-6.png" alt="Image 10" style={staggeredImageStyle(6, 100)} />
         </div>
       </div>
       <style>
