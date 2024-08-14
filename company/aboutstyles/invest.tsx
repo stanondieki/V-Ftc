@@ -22,35 +22,37 @@ const InvestmentOpportunities: React.FC = () => {
           </a>
         </div>
         <div className="lg:w-1/2 grid grid-cols-2 gap-4">
-          {/* Image cards */}
-          <div className="col-span-1 bg-transparent">
-            <div className="bg-gray-800 p-4 rounded-md flex items-center justify-center h-32">
+          {/* Column 1 */}
+          <div className="flex flex-col gap-4">
+            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
               <img src="/images/item/item-banner-1.png" alt="Mining" className="h-20 object-contain" />
             </div>
-          </div>
-          <div className="col-span-1 bg-transparent">
-            <div className="bg-gray-800 p-4 rounded-md flex items-center justify-center h-32">
+            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
               <img src="/images/item/item-banner-1.png" alt="Trading" className="h-20 object-contain" />
             </div>
           </div>
-          <div className="col-span-1 bg-transparent">
-            <div className="bg-gray-800 p-4 rounded-md flex items-center justify-center h-32">
+          {/* Column 2 */}
+          <div className="flex flex-col gap-4">
+            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
               <img src="/images/item/item-banner-6.png" alt="Mining" className="h-20 object-contain" />
             </div>
-          </div>
-          <div className="col-span-1 bg-transparent">
-            <div className="bg-gray-800 p-4 rounded-md flex items-center justify-center h-32">
+            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
               <img src="/images/item/item-banner-7.png" alt="Biogas" className="h-20 object-contain" />
             </div>
-          </div>
-          <div className="col-span-1 bg-transparent">
-            <div className="bg-gray-800 p-4 rounded-md flex items-center justify-center h-32">
+            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
               <img src="/images/item/item-banner-3.png" alt="Gold" className="h-20 object-contain" />
             </div>
-          </div>
-          <div className="col-span-1 bg-transparent">
-            <div className="bg-gray-800 p-4 rounded-md flex items-center justify-center h-32">
+            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
               <img src="/images/item/item-banner-5.png" alt="Trading" className="h-20 object-contain" />
+            </div>
+            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
+              <img src="/images/item/item-banner-3.png" alt="New Image 1" className="h-20 object-contain" />
+            </div>
+            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
+              <img src="/images/item/item-banner-6.png" alt="New Image 2" className="h-20 object-contain" />
+            </div>
+            <div className="bg-transparent p-4 rounded-md flex items-center justify-center h-32">
+              <img src="/images/item/item-banner-5.png" alt="New Image 3" className="h-20 object-contain" />
             </div>
           </div>
         </div>

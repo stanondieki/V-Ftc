@@ -11,7 +11,7 @@ const Privacy = () => {
             backgroundImage: 'url("/images/background/Slider.jpg")',
           }}
         >
-          <div className="text-center px-4">
+          <div className="text-center px-4" style={{maxWidth:'600px'}}>
             <h1 className="text-5xl font-bold mb-4">Privacy Policy</h1>
             <p className="text-lg font-medium">
               By using our services, you acknowledge that you have read and understood this Privacy Policy and agree to the collection, use, and disclosure of your personal information as described herein.
@@ -22,7 +22,7 @@ const Privacy = () => {
 
       {/* Main Content Section */}
       <div className="w-full px-4 py-12">
-        <div className="bg-[#070b18] p-8 rounded-md" style={{ marginLeft: '0' }}>
+        <div className=" p-8 rounded-md" style={{ marginLeft: '0',backgroundColor: '#050231' }}>
           <h2 className="text-2xl font-bold mb-4">Introduction</h2>
           <p className="text-sm mb-6">
             Ventures Federal Trading Commission (V-FTC) is committed to protecting the privacy and security of our users' personal information. This Privacy Policy outlines our practices regarding the collection, use, and disclosure of personal information when you use our services.
