@@ -18,7 +18,7 @@ const Card = ({
       {/* Icon Container at the top */}
       {icon && (
         <div className="flex justify-center mb-4">
-          <div className="bg-blue-500 rounded-full p-2">
+          <div className="bg-gradient-to-r from-blue-500 to-pink-500 rounded-full p-4 flex justify-center items-center">
             {icon}
           </div>
         </div>
@@ -28,52 +28,52 @@ const Card = ({
     </div>
   );
 
-const MineralPage = () =>{
+const MineralPage = () => {
     return (
         <div>
             <section
-                    className="py-8 px-6"
-                    style={{
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundColor: '#130F40',
-                    }}
-                    >
-                    <div className="flex flex-wrap justify-center gap-8 text-white">
-                        <Card
+                className="py-8 px-6"
+                style={{
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundColor: '#130F40',
+                }}
+            >
+                <div className="flex flex-wrap justify-center gap-8 text-white">
+                    <Card
                         title="Minerals Mining"
                         content="The process of taking into account the collective opinion of a group."
                         icon={
                             <Link href="/">
-                            <FaMobileScreenButton size={50} color="white" />
+                                <FaMobileScreenButton size={50} color="white" />
                             </Link>
                         }
                         className="text-white"
-                        />
-                        <Card
+                    />
+                    <Card
                         title="Stocks Investment"
                         content="We have the most popular Stocks investment like Tesla, Apple, Amazon, Google, Meta. The system pays a bonus for excellent individuals conveniently."
                         icon={
                             <Link href="/">
-                            <FaUsers size={50} color="white" />
+                                <FaUsers size={50} color="white" />
                             </Link>
                         }
                         className="text-white"
-                        />
-                        <Card
+                    />
+                    <Card
                         title="Forex Trading"
                         content="We provide our investors with safe and secure Forex trading with market analyst guidance."
                         icon={
                             <Link href="/">
-                            <GoBrowser size={50} color="white" />
+                                <GoBrowser size={50} color="white" />
                             </Link>
                         }
                         className="text-white"
-                        />
-                    </div>
-                </section>
-
+                    />
+                </div>
+            </section>
         </div>
     )
 }
+
 export default MineralPage;

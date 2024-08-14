@@ -2,7 +2,6 @@ import Link from "next/link";
 import { GoShieldLock, GoBrowser } from "react-icons/go";
 import { FaMobileScreenButton } from "react-icons/fa6";
 
-
 const Card = ({
     title,
     content,
@@ -18,7 +17,7 @@ const Card = ({
       {/* Icon Container at the top */}
       {icon && (
         <div className="flex justify-center mb-4">
-          <div className="bg-blue-500 rounded-full p-2">
+          <div className="bg-gradient-to-r from-blue-500 to-pink-500 rounded-full p-4 flex justify-center items-center transition-transform duration-300 ease-in-out transform hover:rotate-360">
             {icon}
           </div>
         </div>
@@ -28,15 +27,14 @@ const Card = ({
     </div>
   );
 
-
 const InvestPage = () => {
 const cardBackgroundImagePath = '/images/background/platform-bg.jpg'; // Update with your actual image path
 
     return (
-        <div>
+        <div style={{ backgroundColor: '#050231' }}>
             <section>
-                <div >
-                    <h2 className="text-4xl font-bold mb-12 mt-12" style={{ color: '#00B4D8' }}>Investment Options</h2>
+                <div>
+                    <h2 className="text-4xl font-bold mb-12 mt-12 items-center flex justify-center" style={{ color: '#00B4D8' }}>Investment Options</h2>
                 </div>
             </section>
             <section
@@ -49,7 +47,7 @@ const cardBackgroundImagePath = '/images/background/platform-bg.jpg'; // Update 
                 }}
                 >
                 <div className="text-center mb-8">
-                <h2 className="text-5xl font-extrabold mb-4" style={{ color: '#db2777' }}>Investment Options</h2> 
+                <h2 className="text-5xl font-extrabold mb-4 items-center flex justify-center" style={{ color: '#db2777' }}>Investment Options</h2> 
                 <h5 className="text-lg font-medium">V-FTC offers a broad spectrum of investment opportunities, including:</h5>
                 </div>
             
@@ -59,7 +57,7 @@ const cardBackgroundImagePath = '/images/background/platform-bg.jpg'; // Update 
                     content="We provide access to a wide range of stocks, enabling investors to build diversified portfolios and benefit from market growth."
                     icon={
                     <Link href="/">
-                        <GoShieldLock size={50} color="white" />
+                        <GoShieldLock size={50} color="white" className="transition-transform duration-300 ease-in-out transform hover:rotate-360" />
                     </Link>
                     }
                     className="text-white"
@@ -69,7 +67,7 @@ const cardBackgroundImagePath = '/images/background/platform-bg.jpg'; // Update 
                     content="Our forex trading services enable investors to trade major currency pairs, taking advantage of the liquidity and volatility in the foreign exchange market."
                     icon={
                     <Link href="/">
-                        <GoBrowser size={50} color="white" />
+                        <GoBrowser size={50} color="white" className="transition-transform duration-300 ease-in-out transform hover:rotate-360" />
                     </Link>
                     }
                     className="text-white"
@@ -79,7 +77,7 @@ const cardBackgroundImagePath = '/images/background/platform-bg.jpg'; // Update 
                     content="Gold and Other Minerals: In addition to gold, we offer investment opportunities in other valuable minerals such as silver, crude oil, and natural gas, providing a comprehensive suite of options for resource-based investments."
                     icon={
                     <Link href="/">
-                        <FaMobileScreenButton size={50} color="white" />
+                        <FaMobileScreenButton size={50} color="white" className="transition-transform duration-700 ease-in-out transform hover:rotate-360" />
                     </Link>
                     }
                     className="text-red"

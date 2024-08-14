@@ -25,10 +25,10 @@ const Card = ({
 
 const VftcPage = () => {
     return (
-        <div>
+        <div style={{ backgroundColor: '#050231' }}>
             <section>
                 <div>
-                    <h2 className="text-4xl font-bold mb-12 mt-12" style={{ color: '#00B4D8' }}>What is V-FTC</h2>
+                    <h2 className="text-4xl font-bold mb-12 mt-12 items-center flex justify-center" style={{ color: '#00B4D8' }}>What is V-FTC</h2>
                 </div>
             </section>
             <section
