@@ -1,34 +1,62 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+import { auth, db } from '@/firebase/firebaseConfig';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { doc, setDoc } from 'firebase/firestore';
 
 const Register: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const router = useRouter();
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      // Create user with email and password
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      // Store user details in Firestore
+      await setDoc(doc(db, 'users', user.uid), {
+        email: user.email,
+        uid: user.uid,
+        // Add any additional fields you want to store
+      });
+
+      console.log('User registered successfully');
+
+      // Redirect to the dashboard
+      router.push('/dashboard');
+    } catch (error) {
+      console.error('Error registering user:', error);
+    }
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#0c0827]">
       <div className="flex flex-col items-center">
         <div className="relative bg-white p-8 rounded-3xl shadow-lg max-w-sm w-full mt-8 border-2 border-gray-700" style={{ minHeight: '620px' }}>
-          {/* Login Link Above Register Form */}
           <div className="absolute top-[-1.5rem] right-[-0.5rem] text-right">
-            <p className="text-sm text-white ">
+            <p className="text-sm text-white">
               Already have an account?{' '}
-            <b>  
-              <a href="/Login" className="text-blue-500 hover:text-blue-800">
-                Login
-              </a> 
-            </b>
+              <b>
+                <a href="/Login" className="text-blue-500 hover:text-blue-800">
+                  Login
+                </a>
+              </b>
             </p>
           </div>
-          
           <div className="flex justify-center mb-4 mt-6">
             <img src="/images/logos/logo.png" alt="FTC Logo" className="h-20" />
           </div>
-          {/* Horizontal Line */}
           <hr className="border-t border-black mb-8" />
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label className="block text-gray-400 text-xs font-bold mb-2" htmlFor="email">
                 EMAIL
@@ -38,6 +66,9 @@ const Register: React.FC = () => {
                 id="email"
                 type="email"
                 placeholder="Email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
             </div>
             <div className="mb-6 mt-6">
@@ -50,6 +81,10 @@ const Register: React.FC = () => {
                   id="password"
                   type={passwordVisible ? 'text' : 'password'}
                   placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  minLength={6}
                 />
                 <button
                   type="button"
@@ -104,7 +139,7 @@ const Register: React.FC = () => {
             </div>
             <div className="mb-4">
               <label className="inline-flex items-center text-sm text-gray-700">
-                <input type="checkbox" className="form-checkbox text-blue-500" />
+                <input type="checkbox" className="form-checkbox text-blue-500" required />
                 <span className="ml-2 text-xs text-gray-700">
                   By signing up I agree that I’m 18 years of age or older, to the User Agreements, Privacy Policy, Cookie Policy, E-Sign Consent
                 </span>

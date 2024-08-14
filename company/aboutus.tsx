@@ -13,7 +13,7 @@ import WhatPage from './aboutstyles/whatvftc';
 
 const About = () => {
   return (
-    <div className=" min-h-screen flex flex-col justify-center items-center text-white">
+    <div className=" min-h-screen flex flex-col justify-center items-center text-white bg-[#000435]">
       <Insupport/>
       <WhatPage/>
       <Missions/>
