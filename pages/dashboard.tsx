@@ -1,10 +1,10 @@
 import React from 'react';
-import ProfileDetails from '@/profile/profiledetails';
+import DataForm from '@/profile/profiledetails';
 
 const Dashboard = () => {
   return (
     <div className="flex min-h-screen">
-            <ProfileDetails/>
+            <DataForm/>
       </div>
   );
 };
