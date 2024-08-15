@@ -1,42 +1,32 @@
 import React, { useState } from 'react';
-import { useRouter } from 'next/router';
-import { auth, db } from '@/firebase/firebaseConfig';
+import { auth } from '@/firebase/firebaseConfig';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { doc, setDoc } from 'firebase/firestore';
+import { useRouter } from 'next/router';
 
 const Register: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const [error, setError] = useState('');
   const router = useRouter();
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    try {
-      // Create user with email and password
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
-
-      // Store user details in Firestore
-      await setDoc(doc(db, 'users', user.uid), {
-        email: user.email,
-        uid: user.uid,
-        // Add any additional fields you want to store
-      });
-
-      console.log('User registered successfully');
-
-      // Redirect to the dashboard
-      router.push('/dashboard');
-    } catch (error) {
-      console.error('Error registering user:', error);
+ const handleRegister = async (e: React.FormEvent) => {
+  e.preventDefault();
+  try {
+    await createUserWithEmailAndPassword(auth, email, password);
+    router.push('/dashboard'); // Redirect to the dashboard or another page after successful registration
+  } catch (err) {
+    if (err instanceof Error) {
+      setError(err.message);
+    } else {
+      setError('An unexpected error occurred');
     }
-  };
+  }
+};
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#0c0827]">
@@ -52,11 +42,12 @@ const Register: React.FC = () => {
               </b>
             </p>
           </div>
+
           <div className="flex justify-center mb-4 mt-6">
             <img src="/images/logos/logo.png" alt="FTC Logo" className="h-20" />
           </div>
           <hr className="border-t border-black mb-8" />
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleRegister}>
             <div className="mb-4">
               <label className="block text-gray-400 text-xs font-bold mb-2" htmlFor="email">
                 EMAIL
@@ -84,7 +75,6 @@ const Register: React.FC = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  minLength={6}
                 />
                 <button
                   type="button"
@@ -145,6 +135,7 @@ const Register: React.FC = () => {
                 </span>
               </label>
             </div>
+            {error && <p className="text-red-500 text-xs italic mb-4">{error}</p>}
             <div className="flex items-center justify-center mb-4">
               <button
                 type="submit"
