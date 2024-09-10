@@ -32,7 +32,7 @@ const Privacy = () => {
             <h2 className="text-xl font-bold mb-2">Information We Collect</h2>
             <h3 className="font-semibold">Personal Information</h3>
             <p className="text-sm">
-              Registration Information: When you create an account, we collect personal information such as your name, email address, phone number, and other contact details.
+              Registration Information: we collect personal information such as your name, email address, phone number, and other contact details.
             </p>
           </div>
 
