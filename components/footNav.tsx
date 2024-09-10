@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="border-t border-gray-600 mt-8 py-4 text-center h-40">
-        <p>© 2024. All rights reserved by VFTC.</p>
+        <p>© 2024. All rights reserved by MSOW CHOIR</p>
       </div>
 
       <a href="#top" className="absolute bottom-8 right-8 bg-pink-600 p-3 rounded-full shadow-lg hover:bg-pink-500">
